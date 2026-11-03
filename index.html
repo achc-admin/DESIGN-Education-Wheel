@@ -54,7 +54,7 @@
       // outer education ring
       const rg=el('g',{class:'ringseg'},svg);
       el('path',{d:wedge(R_O1,R_O2,a1,a2),fill:'#1f4e6e',stroke:'#2c4260','stroke-width':3},rg);
-      const bottom=s.angle>0&&s.angle<180, r=bottom?R_O1+12:R_O2-12;
+      const bottom=s.angle>0&&s.angle<180, r=bottom?224:216;
       const [sx,sy]=pt(r,bottom?a2-5:a1+5),[ex,ey]=pt(r,bottom?a1+5:a2-5);
       el('path',{id:'arc-'+s.id,d:`M${f(sx)} ${f(sy)}A${r} ${r} 0 0 ${bottom?0:1} ${f(ex)} ${f(ey)}`,fill:'none'},defs);
       const t=el('text',{class:'ringtxt'},rg);
@@ -65,9 +65,9 @@
       el('path',{d:wedge(R_IN-4,R_W,a1,a2),fill:s.color,stroke:'#2c4260','stroke-width':3},g);
       const [lx,ly]=pt(128,s.angle);
       // simple person icon
-      el('circle',{cx:lx,cy:ly-30,r:5,fill:'none',stroke:'#fff','stroke-width':1.8},g);
-      el('path',{d:`M${lx-11} ${ly-12}q0-11 11-11t11 11z`,fill:'none',stroke:'#fff','stroke-width':1.8},g);
-      const tt=el('text',{x:lx,y:ly+2},g);
+      el('circle',{cx:lx,cy:ly-20,r:5,fill:'none',stroke:'#fff','stroke-width':1.8},g);
+      el('path',{d:`M${lx-11} ${ly-2}q0-10 11-10t11 10z`,fill:'none',stroke:'#fff','stroke-width':1.8},g);
+      const tt=el('text',{x:lx,y:ly+12},g);
       s.label.forEach((w,i)=>el('tspan',{x:lx,dy:i?14:0},tt,w));
       segs[s.id]=g;
     });
