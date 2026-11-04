@@ -19,14 +19,30 @@
           <section class="panel" data-short="Before the|Survey" data-active="care acct reg" data-education="true">
             <h2>Before the Survey</h2>
             <p>We commit to helping you achieve accreditation. It starts with access to ACHCU, our educational division that offers an extensive collection of resources designed for staff education and development and survey preparation. This includes workshops, workbooks, free webinars, a learning management system, master classes, and more.</p>
+            <!-- To use a real image, replace <div class="ph"></div> with <img src="your-image.jpg" alt=""> -->
+            <div class="who"><em>Who’s involved?</em><div class="teams">
+              <div class="team"><div class="ph"></div>Customer Care Specialist</div>
+              <div class="team"><div class="ph"></div>Regulatory Team</div>
+              <div class="team"><div class="ph"></div>Account Advisor</div>
+            </div></div>
           </section>
           <section class="panel" data-short="During the|Survey" data-active="survey clin acct" data-education="false">
             <h2>During the Survey</h2>
             <p>PLACEHOLDER: Replace with your copy for the survey itself. Describe how your team is supported while surveyors are on site.</p>
+            <div class="who"><em>Who’s involved?</em><div class="teams">
+              <div class="team"><div class="ph"></div>Survey Team</div>
+              <div class="team"><div class="ph"></div>Clinical Staff</div>
+              <div class="team"><div class="ph"></div>Account Advisor</div>
+            </div></div>
           </section>
           <section class="panel" data-short="Beyond the|Survey" data-active="care reg acct" data-education="true">
             <h2>Beyond the Survey</h2>
             <p>PLACEHOLDER: Replace with your copy for life after the survey, such as follow-up, corrections and ongoing education.</p>
+            <div class="who"><em>Who’s involved?</em><div class="teams">
+              <div class="team"><div class="ph"></div>Customer Care Specialist</div>
+              <div class="team"><div class="ph"></div>Regulatory Team</div>
+              <div class="team"><div class="ph"></div>Account Advisor</div>
+            </div></div>
           </section>
         </div>
         <div class="dots" id="dots" aria-label="Section navigator"></div>
@@ -34,112 +50,107 @@
     </div>
     </main>
     <script>
-      /* ---------- EDIT HERE ---------- */
-      const SEGMENTS = [ // angle = center of wedge (deg, 0 = right, -90 = top)
-        { id: 'care', label: ['CUSTOMER CARE', 'SPECIALIST'], angle: -90, color: '#7fa3bf' },
-        { id: 'acct', label: ['ACCOUNT', 'ADVISOR'], angle: -18, color: '#73a595' },
-        { id: 'survey', label: ['SURVEY', 'TEAM'], angle: 54, color: '#a9d18e' },
-        { id: 'clin', label: ['CLINICAL', 'STAFF'], angle: 126, color: '#3a7d9c' },
-        { id: 'reg', label: ['REGULATORY', 'TEAM'], angle: 198, color: '#88c0c0' }
-      ];
-      /* ------------------------------- */
-      const NS = 'http://www.w3.org/2000/svg', C = 250, R_IN = 78, R_W = 190, R_O1 = 196, R_O2 = 244;
-      const rad = d => d * Math.PI / 180, pt = (r, a) => [C + r * Math.cos(rad(a)), C + r * Math.sin(rad(a))];
-      const f = n => n.toFixed(2);
+    /* ---------- EDIT HERE ---------- */
+    const SEGMENTS = [ // angle = center of wedge (deg, 0 = right, -90 = top)
+      {id:'care',  label:['CUSTOMER CARE','SPECIALIST'], angle:-90, color:'#7fa3bf'},
+      {id:'acct',  label:['ACCOUNT','ADVISOR'],          angle:-18, color:'#73a595'},
+      {id:'survey',label:['SURVEY','TEAM'],              angle:54,  color:'#a9d18e'},
+      {id:'clin',  label:['CLINICAL','STAFF'],           angle:126, color:'#3a7d9c'},
+      {id:'reg',   label:['REGULATORY','TEAM'],          angle:198, color:'#88c0c0'}
+    ];
+    /* ------------------------------- */
+    const NS='http://www.w3.org/2000/svg', C=250, R_IN=78, R_W=190, R_O1=196, R_O2=244;
+    const rad=d=>d*Math.PI/180, pt=(r,a)=>[C+r*Math.cos(rad(a)),C+r*Math.sin(rad(a))];
+    const f=n=>n.toFixed(2);
+    function wedge(r1,r2,a1,a2){const [x1,y1]=pt(r2,a1),[x2,y2]=pt(r2,a2),[x3,y3]=pt(r1,a2),[x4,y4]=pt(r1,a1);
+     return `M${f(x1)} ${f(y1)}A${r2} ${r2} 0 0 1 ${f(x2)} ${f(y2)}L${f(x3)} ${f(y3)}A${r1} ${r1} 0 0 0 ${f(x4)} ${f(y4)}Z`}
+    function el(tag,attrs,parent,html){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(html)e.innerHTML=html;parent.appendChild(e);return e}
+    const svg=document.getElementById('wheel');
+    const defs=el('defs',{},svg);
+    const rings={},segs={};
+    SEGMENTS.forEach(s=>{
+      const a1=s.angle-36,a2=s.angle+36;
+      // outer education ring
+      const rg=el('g',{class:'ringseg'},svg);
+      el('path',{d:wedge(R_O1,R_O2,a1,a2),fill:'#1f4e6e',stroke:'#2c4260','stroke-width':3},rg);
+      const bottom=s.angle>0&&s.angle<180, r=bottom?224:216;
+      const [sx,sy]=pt(r,bottom?a2-5:a1+5),[ex,ey]=pt(r,bottom?a1+5:a2-5);
+      el('path',{id:'arc-'+s.id,d:`M${f(sx)} ${f(sy)}A${r} ${r} 0 0 ${bottom?0:1} ${f(ex)} ${f(ey)}`,fill:'none'},defs);
+      const t=el('text',{class:'ringtxt'},rg);
+      t.innerHTML=`<textPath href="#arc-${s.id}" startOffset="50%">EDUCATION</textPath>`;
+      rings[s.id]=rg;
+      // inner wedge
+      const g=el('g',{class:'seg',tabindex:'-1'},svg);
+      el('path',{d:wedge(R_IN-4,R_W,a1,a2),fill:s.color,stroke:'#2c4260','stroke-width':3},g);
+      const [lx,ly]=pt(128,s.angle);
+      // simple person icon
+      el('circle',{cx:lx,cy:ly-20,r:5,fill:'none',stroke:'#fff','stroke-width':1.8},g);
+      el('path',{d:`M${lx-11} ${ly-2}q0-10 11-10t11 10z`,fill:'none',stroke:'#fff','stroke-width':1.8},g);
+      const tt=el('text',{x:lx,y:ly+12},g);
+      s.label.forEach((w,i)=>el('tspan',{x:lx,dy:i?14:0},tt,w));
+      segs[s.id]=g;
+    });
+    // center
+    el('circle',{cx:C,cy:C,r:R_IN,fill:'#fff'},svg);
+    el('circle',{cx:C-6,cy:C-30,r:6,fill:'none',stroke:'#1f4e6e','stroke-width':2},svg);
+    el('path',{d:`M${C-18} ${C-10}q0-14 12-14t12 14`,fill:'none',stroke:'#1f4e6e','stroke-width':2},svg);
+    el('circle',{cx:C+12,cy:C-24,r:20,fill:'none',stroke:'#1f4e6e','stroke-width':2,opacity:0},svg);
+    const ct=el('text',{x:C,y:C+22,'text-anchor':'middle','font-size':13,'font-weight':700,fill:'#1f4e6e','letter-spacing':'.06em'},svg);
+    el('tspan',{x:C},ct,'YOUR');el('tspan',{x:C,dy:16},ct,'NEEDS');
     
-      function wedge(r1, r2, a1, a2) {
-        const [x1, y1] = pt(r2, a1), [x2, y2] = pt(r2, a2), [x3, y3] = pt(r1, a2), [x4, y4] = pt(r1, a1);
-        return `M${f(x1)} ${f(y1)}A${r2} ${r2} 0 0 1 ${f(x2)} ${f(y2)}L${f(x3)} ${f(y3)}A${r1} ${r1} 0 0 0 ${f(x4)} ${f(y4)}Z`
-      }
-      function el(tag, attrs, parent, html) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (html) e.innerHTML = html; parent.appendChild(e); return e }
-      const svg = document.getElementById('wheel');
-      const defs = el('defs', {}, svg);
-      const rings = {}, segs = {};
-      SEGMENTS.forEach(s => {
-        const a1 = s.angle - 36, a2 = s.angle + 36;
-        // outer education ring
-        const rg = el('g', { class: 'ringseg' }, svg);
-        el('path', { d: wedge(R_O1, R_O2, a1, a2), fill: '#1f4e6e', stroke: '#2c4260', 'stroke-width': 3 }, rg);
-        const bottom = s.angle > 0 && s.angle < 180, r = bottom ? 224 : 216;
-        const [sx, sy] = pt(r, bottom ? a2 - 5 : a1 + 5), [ex, ey] = pt(r, bottom ? a1 + 5 : a2 - 5);
-        el('path', { id: 'arc-' + s.id, d: `M${f(sx)} ${f(sy)}A${r} ${r} 0 0 ${bottom ? 0 : 1} ${f(ex)} ${f(ey)}`, fill: 'none' }, defs);
-        const t = el('text', { class: 'ringtxt' }, rg);
-        t.innerHTML = `<textPath href="#arc-${s.id}" startOffset="50%">EDUCATION</textPath>`;
-        rings[s.id] = rg;
-        // inner wedge
-        const g = el('g', { class: 'seg', tabindex: '-1' }, svg);
-        el('path', { d: wedge(R_IN - 4, R_W, a1, a2), fill: s.color, stroke: '#2c4260', 'stroke-width': 3 }, g);
-        const [lx, ly] = pt(128, s.angle);
-        // simple person icon
-        el('circle', { cx: lx, cy: ly - 20, r: 5, fill: 'none', stroke: '#fff', 'stroke-width': 1.8 }, g);
-        el('path', { d: `M${lx - 11} ${ly - 2}q0-10 11-10t11 10z`, fill: 'none', stroke: '#fff', 'stroke-width': 1.8 }, g);
-        const tt = el('text', { x: lx, y: ly + 12 }, g);
-        s.label.forEach((w, i) => el('tspan', { x: lx, dy: i ? 14 : 0 }, tt, w));
-        segs[s.id] = g;
+    // steps + panels
+    const stepsEl=document.getElementById('steps'), sc=document.getElementById('scroller');
+    // Steps are read from the <section class="panel"> elements in the HTML
+    const STEPS=[...sc.querySelectorAll('.panel')].map(p=>({
+      el:p, title:p.querySelector('h2').textContent,
+      short:p.dataset.short.split('|'), active:p.dataset.active.split(/\s+/),
+      education:p.dataset.education==='true'
+    }));
+    const btns=STEPS.map((s,i)=>{
+      const b=document.createElement('button');b.className='step';b.type='button';
+      b.setAttribute('aria-label',`Step ${i+1}: ${s.title}`);
+      b.innerHTML=`<span class="dot">${i+1}</span><span>${s.short.join('<br>')}</span>`;
+      b.onclick=()=>sc.scrollTo({left:i*sc.clientWidth});
+      stepsEl.appendChild(b);
+      if(i<STEPS.length-1){const c=document.createElement('span');c.className='conn';stepsEl.appendChild(c)}
+      const p=s.el, h=p.querySelector('h2');
+      const head=document.createElement('div');head.className='head';
+      head.innerHTML=`<span class="badge">${i+1}</span>`;
+      h.replaceWith(head);head.appendChild(h);
+      return b;
+    });
+    const dots=STEPS.map((s,i)=>{
+      const d=document.createElement('button');d.type='button';
+      d.setAttribute('aria-label',`Go to ${s.title}`);
+      d.onclick=()=>sc.scrollTo({left:i*sc.clientWidth});
+      document.getElementById('dots').appendChild(d);
+      return d;
+    });
+    let cur=-1;
+    function setStep(i){
+      if(i===cur)return;cur=i;
+      dots.forEach((d,j)=>d.classList.toggle('on',j===i));
+      btns.forEach((b,j)=>{b.classList.toggle('on',j===i);b.setAttribute('aria-current',j===i?'step':'false')});
+      const s=STEPS[i];
+      SEGMENTS.forEach(g=>{
+        segs[g.id].classList.toggle('dim',!s.active.includes(g.id));
+        rings[g.id].classList.toggle('dim',!s.education);
       });
-      // center
-      el('circle', { cx: C, cy: C, r: R_IN, fill: '#fff' }, svg);
-      el('circle', { cx: C - 6, cy: C - 30, r: 6, fill: 'none', stroke: '#1f4e6e', 'stroke-width': 2 }, svg);
-      el('path', { d: `M${C - 18} ${C - 10}q0-14 12-14t12 14`, fill: 'none', stroke: '#1f4e6e', 'stroke-width': 2 }, svg);
-      el('circle', { cx: C + 12, cy: C - 24, r: 20, fill: 'none', stroke: '#1f4e6e', 'stroke-width': 2, opacity: 0 }, svg);
-      const ct = el('text', { x: C, y: C + 22, 'text-anchor': 'middle', 'font-size': 13, 'font-weight': 700, fill: '#1f4e6e', 'letter-spacing': '.06em' }, svg);
-      el('tspan', { x: C }, ct, 'YOUR'); el('tspan', { x: C, dy: 16 }, ct, 'NEEDS');
-    
-      // steps + panels
-      const stepsEl = document.getElementById('steps'), sc = document.getElementById('scroller');
-      const names = { care: 'Customer Care Specialist', acct: 'Account Advisor', survey: 'Survey Team', clin: 'Clinical Staff', reg: 'Regulatory Team' };
-      // Steps are read from the <section class="panel"> elements in the HTML
-      const STEPS = [...sc.querySelectorAll('.panel')].map(p => ({
-        el: p, title: p.querySelector('h2').textContent,
-        short: p.dataset.short.split('|'), active: p.dataset.active.split(/\s+/),
-        education: p.dataset.education === 'true'
-      }));
-      const btns = STEPS.map((s, i) => {
-        const b = document.createElement('button'); b.className = 'step'; b.type = 'button';
-        b.setAttribute('aria-label', `Step ${i + 1}: ${s.title}`);
-        b.innerHTML = `<span class="dot">${i + 1}</span><span>${s.short.join('<br>')}</span>`;
-        b.onclick = () => sc.scrollTo({ left: i * sc.clientWidth });
-        stepsEl.appendChild(b);
-        if (i < STEPS.length - 1) { const c = document.createElement('span'); c.className = 'conn'; stepsEl.appendChild(c) }
-        const p = s.el, h = p.querySelector('h2');
-        const head = document.createElement('div'); head.className = 'head';
-        head.innerHTML = `<span class="badge">${i + 1}</span>`;
-        h.replaceWith(head); head.appendChild(h);
-        p.insertAdjacentHTML('beforeend', `<div class="who"><em>Who’s involved?</em><div class="teams">${s.active.map(id => `<div class="team"><i></i>${names[id]}</div>`).join('')}</div></div>`);
-        return b;
-      });
-      const dots = STEPS.map((s, i) => {
-        const d = document.createElement('button'); d.type = 'button';
-        d.setAttribute('aria-label', `Go to ${s.title}`);
-        d.onclick = () => sc.scrollTo({ left: i * sc.clientWidth });
-        document.getElementById('dots').appendChild(d);
-        return d;
-      });
-      let cur = -1;
-      function setStep(i) {
-        if (i === cur) return; cur = i;
-        dots.forEach((d, j) => d.classList.toggle('on', j === i));
-        btns.forEach((b, j) => { b.classList.toggle('on', j === i); b.setAttribute('aria-current', j === i ? 'step' : 'false') });
-        const s = STEPS[i];
-        SEGMENTS.forEach(g => {
-          segs[g.id].classList.toggle('dim', !s.active.includes(g.id));
-          rings[g.id].classList.toggle('dim', !s.education);
-        });
-      }
-      sc.addEventListener('scroll', () => setStep(Math.round(sc.scrollLeft / sc.clientWidth)), { passive: true });
-      let lock = false;
-      sc.addEventListener('wheel', e => {
-        const d = Math.abs(e.deltaY) >= Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
-        if (Math.abs(d) < 4) return;
-        const next = cur + (d > 0 ? 1 : -1);
-        if (next < 0 || next >= STEPS.length) return; // at the first/last step, let the page scroll normally
-        e.preventDefault();
-        if (lock) return;
-        lock = true;
-        sc.scrollTo({ left: next * sc.clientWidth });
-        setTimeout(() => { lock = false }, 700);
-      }, { passive: false });
-      setStep(0);
+    }
+    sc.addEventListener('scroll',()=>setStep(Math.round(sc.scrollLeft/sc.clientWidth)),{passive:true});
+    let lock=false;
+    sc.addEventListener('wheel',e=>{
+      const d=Math.abs(e.deltaY)>=Math.abs(e.deltaX)?e.deltaY:e.deltaX;
+      if(Math.abs(d)<4)return;
+      const next=cur+(d>0?1:-1);
+      if(next<0||next>=STEPS.length)return; // at the first/last step, let the page scroll normally
+      e.preventDefault();
+      if(lock)return;
+      lock=true;
+      sc.scrollTo({left:next*sc.clientWidth});
+      setTimeout(()=>{lock=false},700);
+    },{passive:false});
+    setStep(0);
     </script>
     </body>
     </html>
