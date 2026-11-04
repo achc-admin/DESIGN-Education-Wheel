@@ -19,9 +19,9 @@
     .step:hover .dot{border-color:#cfe0f0}
     .step:focus-visible .dot{outline:3px solid #a9d18e;outline-offset:3px}
     .conn{flex:none;width:48px;height:3px;background:var(--mute);margin-top:24px}
-    .scroller{display:flex;height:310px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+    .scroller{display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
     .scroller::-webkit-scrollbar{display:none}
-    .panel{flex:0 0 100%;min-width:0;height:310px;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:flex-start}
+    .panel{flex:0 0 100%;min-width:0;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:flex-start}
     .head{display:flex;gap:18px;align-items:center;margin-bottom:12px}
     .badge{flex:none;width:52px;height:52px;border-radius:50%;border:3px solid #fff;display:grid;place-items:center;font-size:22px;font-weight:700}
     .head h2{margin:0;font-size:19px;font-weight:600}
@@ -37,5 +37,5 @@
     .dots button:hover{background:#cfe0f0}
     .dots button.on{width:26px;background:#fff}
     .dots button:focus-visible{outline:2px solid #a9d18e;outline-offset:3px}
-    @media (max-width:860px){.grid{grid-template-columns:1fr;gap:28px}main{padding:28px 18px}.scroller,.panel{height:360px}}
+    @media (max-width:860px){.grid{grid-template-columns:1fr;gap:28px}main{padding:28px 18px}}
     @media (prefers-reduced-motion:reduce){.scroller{scroll-behavior:auto}.seg,.ringseg{transition:none}}
