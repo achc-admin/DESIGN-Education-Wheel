@@ -14,9 +14,9 @@
       <svg class="wheel" id="wheel" viewBox="0 0 500 500" role="img" aria-label="Wheel of teams surrounding your needs"></svg>
       <div>
         <div class="steps" id="steps"></div>
-        <!-- EDIT STEPS HERE. data-short = nav label (use | for a line break); data-active = wedges to highlight (care acct survey clin reg); data-education = highlight the outer ring -->
+        <!-- EDIT STEPS HERE. data-short = nav label (use | for a line break). The wheel highlights the segments whose label matches a team listed in "Who’s involved?" ("Education Team" lights the outer ring). -->
         <div class="scroller" id="scroller">
-          <section class="panel" data-short="Before the|Survey" data-active="care acct reg" data-education="true">
+          <section class="panel" data-short="Before the|Survey">
             <h2>Before the Survey</h2>
             <p>ACHC is committed to helping you achieve accreditation. It starts with access to expertise. Your customer care specialist will point you to resources, including those of ACHCU, our educational division that offers an extensive collection of resources designed for staff education and development, and survey preparation. You also gain access to ongoing clinical regulatory support coordinated by your dedicated account advisor.</p>
             <!-- To use a real image, replace <div class="ph"></div> with <img src="your-image.jpg" alt=""> -->
@@ -28,7 +28,7 @@
               <div class="team"><div class="ph"></div>Education Team</div>
             </div></div>
           </section>
-          <section class="panel" data-short="During the|Survey" data-active="survey clin acct" data-education="false">
+          <section class="panel" data-short="During the|Survey">
             <h2>During the Survey</h2>
             <p>Our streamlined survey process is designed to help you gain value from your accreditation—by enhancing your patient care and your business operations. During your formal review, our industry-expert Surveyors will follow a comprehensive process that includes direct observations, interviews, and document review. While assessing compliance, they will answer questions and share insights into improvement opportunities.</p>
             <div class="who"><em>Who’s involved?</em><div class="teams">
@@ -37,7 +37,7 @@
               <div class="team"><div class="ph"></div>Clinical Staff</div>
             </div></div>
           </section>
-          <section class="panel" data-short="Beyond the|Survey" data-active="care reg acct" data-education="true">
+          <section class="panel" data-short="Beyond the|Survey">
             <h2>Beyond the Survey</h2>
             <p>ACHC Surveyors will conduct the regular review of your organization, but ACHC shares communication throughout the accreditation cycle to help you maintain excellence and a culture of continuous improvement. Over time, your organization will maximize its potential for excellence supported by the quality improvement framework that ACHC Accreditation provides.</p>
             <div class="who"><em>Who’s involved?</em><div class="teams">
@@ -95,8 +95,8 @@
     });
     // center
     el('circle',{cx:C,cy:C,r:R_IN,fill:'#fff'},svg);
-    el('circle',{cx:C-6,cy:C-30,r:6,fill:'none',stroke:'#1f4e6e','stroke-width':2},svg);
-    el('path',{d:`M${C-18} ${C-10}q0-14 12-14t12 14`,fill:'none',stroke:'#1f4e6e','stroke-width':2},svg);
+    el('circle',{cx:C,cy:C-30,r:6,fill:'none',stroke:'#1f4e6e','stroke-width':2},svg);
+    el('path',{d:`M${C-12} ${C-10}q0-14 12-14t12 14`,fill:'none',stroke:'#1f4e6e','stroke-width':2},svg);
     el('circle',{cx:C+12,cy:C-24,r:20,fill:'none',stroke:'#1f4e6e','stroke-width':2,opacity:0},svg);
     const ct=el('text',{x:C,y:C+22,'text-anchor':'middle','font-size':13,'font-weight':700,fill:'#1f4e6e','letter-spacing':'.06em'},svg);
     el('tspan',{x:C},ct,'YOUR');el('tspan',{x:C,dy:16},ct,'NEEDS');
@@ -104,11 +104,20 @@
     // steps + panels
     const stepsEl=document.getElementById('steps'), sc=document.getElementById('scroller');
     // Steps are read from the <section class="panel"> elements in the HTML
-    const STEPS=[...sc.querySelectorAll('.panel')].map(p=>({
-      el:p, title:p.querySelector('h2').textContent,
-      short:p.dataset.short.split('|'), active:p.dataset.active.split(/\s+/),
-      education:p.dataset.education==='true'
-    }));
+    // Each team name in "Who’s involved?" is matched to the wheel segment with the same label.
+    // "Education Team" lights the outer Education ring.
+    const norm=t=>t.toLowerCase().replace(/[^a-z]/g,'');
+    const TEAM_TO_SEG={clinicalteam:'clin'}; // extra aliases go here
+    SEGMENTS.forEach(s=>TEAM_TO_SEG[norm(s.label.join(''))]=s.id);
+    const STEPS=[...sc.querySelectorAll('.panel')].map(p=>{
+      const teams=[...p.querySelectorAll('.team')].map(t=>norm(t.textContent));
+      return {
+        el:p, title:p.querySelector('h2').textContent,
+        short:p.dataset.short.split('|'),
+        active:teams.map(n=>TEAM_TO_SEG[n]).filter(Boolean),
+        education:teams.includes('educationteam')
+      };
+    });
     const btns=STEPS.map((s,i)=>{
       const b=document.createElement('button');b.className='step';b.type='button';
       b.setAttribute('aria-label',`Step ${i+1}: ${s.title}`);
