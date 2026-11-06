@@ -198,7 +198,9 @@
       });
     }
     sc.addEventListener('scroll',()=>{fade();setStep(Math.round(sc.scrollLeft/sc.clientWidth))},{passive:true});
-    window.addEventListener('resize',fade);
+    window.addEventListener('resize',()=>{ // keep the current section aligned when the width changes (rotate / resize)
+      sc.style.scrollBehavior='auto';sc.scrollLeft=Math.max(cur,0)*sc.clientWidth;sc.style.scrollBehavior='';fade();
+    });
     fade();
     let lock=false;
     const WHEEL_AREA=document.querySelector('.grid'); // wheel + content. Use document.querySelector('main') to include the title too
