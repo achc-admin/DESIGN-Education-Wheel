@@ -44,6 +44,7 @@ box-sizing:border-box;}
 .achc-edu .ph,.achc-edu .team img{display:block;width:44px;height:44px;margin:0 auto 10px;object-fit:cover}
 .achc-edu .ph{border:2px dashed #fff;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.6' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='16' rx='2'/%3E%3Ccircle cx='9' cy='10' r='1.6'/%3E%3Cpath d='M3 17l5-5 4 4 3-3 6 6'/%3E%3C/svg%3E") center/22px no-repeat}
 .achc-edu .team img.icon{width:56px;height:52px;object-fit:contain}
+.achc-edu .team svg.icon{display:block;width:56px;height:52px;margin:0 auto 10px}
 .achc-edu .dots{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:18px}
 .achc-edu .dots button{all:unset;cursor:pointer;width:10px;height:10px;border-radius:5px;background:var(--mute);transition:width .3s,background .3s}
 .achc-edu .dots button:hover{background:#cfe0f0}
