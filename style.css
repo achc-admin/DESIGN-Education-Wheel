@@ -18,6 +18,11 @@
     .step:hover .dot{border-color:#cfe0f0}
     .step:focus-visible .dot{outline:3px solid #a9d18e;outline-offset:3px}
     .conn{flex:none;width:48px;height:3px;background:var(--mute);margin-top:24px}
+        .step.start{width:auto}
+        .step .pill{height:50px;padding:0 20px;border-radius:25px;border:3px solid var(--mute);display:flex;align-items:center;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;transition:all .3s}
+        .step.start.on .pill{border-color:#fff;background:var(--bg)}
+        .step.start:hover .pill{border-color:#cfe0f0}
+        .step.start:focus-visible .pill{outline:3px solid #a9d18e;outline-offset:3px}
     .scroller{display:flex;padding-bottom:10px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
     .scroller::-webkit-scrollbar{display:none}
     .panel{flex:0 0 100%;min-width:0;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:flex-start}
@@ -52,5 +57,9 @@
           .panel p{font-size:14px}
           .team{font-size:10px}
         }
-        @media (max-width:400px){.conn{width:30px}.panel p{font-size:13.5px}}
+        @media (max-width:400px){
+          .conn{width:18px;margin-top:20px}.panel p{font-size:13.5px}
+          .step{width:42px}.step .dot{width:42px;height:42px;font-size:19px}
+          .step.start{width:auto}.step .pill{height:42px;padding:0 13px;font-size:10.5px}
+        }
     @media (prefers-reduced-motion:reduce){.scroller{scroll-behavior:auto}.seg,.ringseg{transition:none}}
