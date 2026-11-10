@@ -1,250 +1,246 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Surrounding you with education</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <main>
-    <h1>Surrounding you with education</h1>
-    <div class="grid">
-      <svg class="wheel" id="wheel" viewBox="0 0 500 500" role="img" aria-label="Wheel of teams surrounding your needs"></svg>
-      <div>
-        <div class="steps" id="steps"></div>
-        <!-- EDIT STEPS HERE. data-short = nav label (use | for a line break). The wheel highlights the segments whose label matches a team listed in "Who’s involved?" ("Education Team" lights the outer ring). -->
-        <div class="scroller" id="scroller">
-              <!-- INTRODUCTION: data-intro = no number button; the whole wheel is highlighted -->
-              <section class="panel" data-intro data-short="Start Here">
-                <h2>Surrounding you with education</h2>
-                <p>PLACEHOLDER: Add your introduction here. Give a short overview of how ACHC supports you from start to finish, and invite the reader to explore each stage of the accreditation journey.</p>
-                <p>PLACEHOLDER: A second short paragraph can go here.</p>
-              </section>
-          <section class="panel" data-short="Before the|Survey">
-            <h2>Before the Survey</h2>
-            <p>ACHC is committed to helping you achieve accreditation. It starts with access to expertise. Your customer care specialist will point you to resources, including those of ACHCU, our educational division that offers an extensive collection of resources designed for staff education and development, and survey preparation. You also gain access to ongoing clinical regulatory support coordinated by your dedicated account advisor.</p>
-            <!-- To use a real image, replace <div class="ph"></div> with <img src="your-image.jpg" alt=""> -->
-            <div class="who"><em>Who’s involved?</em><div class="teams">
-              <div class="team"><img class="icon" src="customer-care-specialist_1.svg" alt="">Customer Care Specialist</div>
-              <div class="team"><img class="icon" src="account-advisor.svg" alt="">Account Advisor</div>
-              <div class="team"><img class="icon" src="regulatory-team.svg" alt="">Regulatory Team</div>
-              <div class="team"><img class="icon" src="clinical-staff.svg" alt="">Clinical Staff</div>
-              <div class="team"><div class="ph"></div>Education Team</div>
-            </div></div>
-          </section>
-          <section class="panel" data-short="During the|Survey">
-            <h2>During the Survey</h2>
-            <p>Our streamlined survey process is designed to help you gain value from your accreditation—by enhancing your patient care and your business operations. During your formal review, our industry-expert Surveyors will follow a comprehensive process that includes direct observations, interviews, and document review. While assessing compliance, they will answer questions and share insights into improvement opportunities.</p>
-            <div class="who"><em>Who’s involved?</em><div class="teams">
-              <div class="team"><img class="icon" src="account-advisor.svg" alt="">Account Advisor</div>
-              <div class="team"><img class="icon" src="survey-team.svg" alt="">Survey Team</div>
-              <div class="team"><img class="icon" src="clinical-staff.svg" alt="">Clinical Staff</div>
-            </div></div>
-          </section>
-          <section class="panel" data-short="Beyond the|Survey">
-            <h2>Beyond the Survey</h2>
-            <p>ACHC Surveyors will conduct the regular review of your organization, but ACHC shares communication throughout the accreditation cycle to help you maintain excellence and a culture of continuous improvement. Over time, your organization will maximize its potential for excellence supported by the quality improvement framework that ACHC Accreditation provides.</p>
-            <div class="who"><em>Who’s involved?</em><div class="teams">
-              <div class="team"><img class="icon" src="account-advisor.svg" alt="">Account Advisor</div>
-              <div class="team"><img class="icon" src="clinical-staff.svg" alt="">Clinical Team</div>
-              <div class="team"><img class="icon" src="regulatory-team.svg" alt="">Regulatory Team</div>
-              <div class="team"><div class="ph"></div>Education Team</div>
-            </div></div>
-          </section>
-        </div>
-        <div class="dots" id="dots" aria-label="Section navigator"></div>
+
+<div class="achc-edu">
+  <h2 class="achc-title">Surrounding you with education</h2>
+  <div class="grid">
+    <svg class="wheel" viewBox="0 0 500 500" role="img" aria-label="Wheel of teams surrounding your needs"></svg>
+    <div>
+      <div class="steps"></div>
+      <!-- EDIT STEPS HERE. data-short = nav label (use | for a line break). The wheel highlights the segments whose label matches a team listed in "Who’s involved?" ("Education Team" lights the outer ring). -->
+      <div class="scroller">
+            <!-- INTRODUCTION: data-intro = no number button; the whole wheel is highlighted -->
+            <section class="panel" data-intro data-short="Start Here">
+              <h2>Surrounding you with education</h2>
+              <p>An end-to-end commitment to education makes ACHC different. We act as an extension of your team to help you prepare, achieve, and maintain accreditation/certification. We surround your needs with access to expertise and proactive support.</p>
+              <p>Activate the graphic by clicking through the stages of the accreditation cycle. See how five ACHC roles partner to support your success. For additional learning opportunities, our educational division hosts an annual flagship education event: ACHCU Academy [insert link] and curates a rich library of program-specific resources that are available 24/7.</p>
+            </section>
+        <section class="panel" data-short="Before the|Survey">
+          <h2>Before the Survey</h2>
+          <p>ACHC is committed to helping you achieve accreditation. It starts with access to expertise. Your customer care specialist will point you to resources, including those of ACHCU, our educational division that offers an extensive collection of resources designed for staff education and development, and survey preparation. You also gain access to ongoing clinical regulatory support coordinated by your dedicated account advisor.</p>
+          <!-- To use a real image, replace <div class="ph"></div> with <img src="your-image.jpg" alt=""> -->
+          <div class="who"><em>Who’s involved?</em><div class="teams">
+            <div class="team"><img class="icon" src="customer-care-specialist_1.svg" alt="">Customer Care Specialist</div>
+            <div class="team"><img class="icon" src="account-advisor.svg" alt="">Account Advisor</div>
+            <div class="team"><img class="icon" src="regulatory-team.svg" alt="">Regulatory Team</div>
+            <div class="team"><img class="icon" src="clinical-staff.svg" alt="">Clinical Staff</div>
+            <div class="team"><div class="ph"></div>Education Team</div>
+          </div></div>
+        </section>
+        <section class="panel" data-short="During the|Survey">
+          <h2>During the Survey</h2>
+          <p>Our streamlined survey process is designed to help you gain value from your accreditation—by enhancing your patient care and your business operations. During your formal review, our industry-expert Surveyors will follow a comprehensive process that includes direct observations, interviews, and document review. While assessing compliance, they will answer questions and share insights into improvement opportunities.</p>
+          <div class="who"><em>Who’s involved?</em><div class="teams">
+            <div class="team"><img class="icon" src="account-advisor.svg" alt="">Account Advisor</div>
+            <div class="team"><img class="icon" src="survey-team.svg" alt="">Survey Team</div>
+            <div class="team"><img class="icon" src="clinical-staff.svg" alt="">Clinical Staff</div>
+          </div></div>
+        </section>
+        <section class="panel" data-short="Beyond the|Survey">
+          <h2>Beyond the Survey</h2>
+          <p>ACHC Surveyors will conduct the regular review of your organization, but ACHC shares communication throughout the accreditation cycle to help you maintain excellence and a culture of continuous improvement. Over time, your organization will maximize its potential for excellence supported by the quality improvement framework that ACHC Accreditation provides.</p>
+          <div class="who"><em>Who’s involved?</em><div class="teams">
+            <div class="team"><img class="icon" src="account-advisor.svg" alt="">Account Advisor</div>
+            <div class="team"><img class="icon" src="clinical-staff.svg" alt="">Clinical Team</div>
+            <div class="team"><img class="icon" src="regulatory-team.svg" alt="">Regulatory Team</div>
+            <div class="team"><div class="ph"></div>Education Team</div>
+          </div></div>
+        </section>
       </div>
+      <div class="dots" aria-label="Section navigator"></div>
     </div>
-    </main>
-    <script id="preview-assets">
-    /* PREVIEW ONLY: embeds the SVG file so the hosted page can show it. In your local copy, delete this block and keep customer-care-specialist.svg next to the HTML file. */
-    window.ASSETS={"YourNeeds.svg":"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MDAgNTAwIj4KICA8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMzAuOC4yLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogMi4xLjQgQnVpbGQgNykgIC0tPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuc3QwIHsKICAgICAgICBmaWxsOiAjMDA4MWEwOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjY0LjgzLDI4NC4zM2gtNS40NHYtMTAuNjJjLS4xNS0yLjAyLTcuOS03Ljg4LTE0Ljk4LTcuODhzLTE0Ljg0LDUuODYtMTQuOTksNy44OXYxMC42MWgtNS40NHYtMTAuNjJjMC02LjQzLDEyLTEzLjMyLDIwLjQzLTEzLjMyczIwLjQxLDYuODksMjAuNDEsMTMuMzJ2MTAuNjJaIi8+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTI0NC40MSwzMDEuMjFjLTIyLjk3LDAtNDEuNjYtMTguNjktNDEuNjYtNDEuNjZzMTguNjktNDEuNjYsNDEuNjYtNDEuNjYsNDEuNjYsMTguNjksNDEuNjYsNDEuNjYtMTguNjgsNDEuNjYtNDEuNjYsNDEuNjZaTTI0NC40MSwyMjMuMzNjLTE5Ljk4LDAtMzYuMjMsMTYuMjUtMzYuMjMsMzYuMjJzMTYuMjUsMzYuMjIsMzYuMjMsMzYuMjIsMzYuMjItMTYuMjUsMzYuMjItMzYuMjItMTYuMjUtMzYuMjItMzYuMjItMzYuMjJaIi8+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTI0NC40MSwyNjUuNjdjLTcuNjEsMC0xMy4zNC02LjM2LTEzLjM0LTE0Ljh2LTQuMDNjMC04LjQ0LDUuNzQtMTQuOCwxMy4zNC0xNC44czEzLjM0LDYuMzYsMTMuMzQsMTQuOHY0LjAzYzAsOC40NC01LjczLDE0LjgtMTMuMzQsMTQuOFpNMjQ0LjQxLDIzNy40OGMtNS4xOSwwLTcuOTEsNC43MS03LjkxLDkuMzZ2NC4wM2MwLDQuNjUsMi43Miw5LjM2LDcuOTEsOS4zNnM3LjktNC43MSw3LjktOS4zNnYtNC4wM2MwLTQuNjUtMi43Mi05LjM2LTcuOS05LjM2WiIvPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMDEuMSwyMjQuMTVoLTUuNDR2LTEwLjYyYzAtNi40MywxMS45OC0xMy4zMiwyMC40Mi0xMy4zMiw2LjU2LDAsMTMuNzEsMy43MywxNy4zOSw3LjQxLDIuMDEsMi4wMSwzLjAzLDQsMy4wMiw1LjkxaC01LjQ0czIuNzIsMCwyLjcyLDBoLTIuNzJjLS4xNS0yLjAyLTcuOS03Ljg3LTE0Ljk4LTcuODdzLTE0Ljg0LDUuODUtMTQuOTksNy44OHYxMC42MVoiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjE2LjA5LDIwNS40OGMtNy42MSwwLTEzLjM0LTYuMzYtMTMuMzQtMTQuOHYtNC4wM2MwLTguNDQsNS43My0xNC44LDEzLjM0LTE0LjhzMTMuMzQsNi4zNiwxMy4zNCwxNC44djQuMDNjMCw4LjQ0LTUuNzMsMTQuOC0xMy4zNCwxNC44Wk0yMTYuMDksMTc3LjNjLTUuMTgsMC03LjksNC43MS03LjksOS4zNnY0LjAzYzAsNC42NSwyLjcyLDkuMzYsNy45LDkuMzZzNy45LTQuNzEsNy45LTkuMzZ2LTQuMDNjMC00LjY1LTIuNzItOS4zNi03LjktOS4zNloiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjkzLjE1LDIyNC4xNWgtNS40NHYtMTAuNjJjLS4xNS0yLjAyLTcuOS03Ljg3LTE0Ljk5LTcuODdzLTE0LjgzLDUuODUtMTQuOTgsNy44OGgtNS40NGMwLTYuNDQsMTEuOTgtMTMuMzIsMjAuNDEtMTMuMzJzMjAuNDIsNi44OSwyMC40MiwxMy4zMnYxMC42MloiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjcyLjczLDIwNS40OGMtNy42MSwwLTEzLjM0LTYuMzYtMTMuMzQtMTQuOHYtNC4wM2MwLTguNDQsNS43My0xNC44LDEzLjM0LTE0LjhzMTMuMzQsNi4zNiwxMy4zNCwxNC44djQuMDNjMCw4LjQ0LTUuNzMsMTQuOC0xMy4zNCwxNC44Wk0yNzIuNzMsMTc3LjNjLTUuMTgsMC03LjksNC43MS03LjksOS4zNnY0LjAzYzAsNC42NSwyLjcyLDkuMzYsNy45LDkuMzZzNy45LTQuNzEsNy45LTkuMzZ2LTQuMDNjMC00LjY1LTIuNzItOS4zNi03LjktOS4zNloiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzI1LjAyLDI4MC43OWgtNS40NHYtMTAuNjJjLS4xNS0yLjAyLTcuOS03Ljg4LTE0Ljk4LTcuODgtNC40OCwwLTkuNiwyLjUtMTIuNDUsNC44M2wtMy40My00LjIyYzMuNDMtMi43OSw5LjY1LTYuMDUsMTUuODktNi4wNSw4LjQzLDAsMjAuNDEsNi44OSwyMC40MSwxMy4zMnYxMC42MloiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzA0LjU5LDI2Mi4xM2MtNy42MSwwLTEzLjM0LTYuMzYtMTMuMzQtMTQuOHYtNC4wM2MwLTguNDQsNS43My0xNC44LDEzLjM0LTE0LjhzMTMuMzQsNi4zNiwxMy4zNCwxNC44djQuMDNjMCw4LjQ0LTUuNzMsMTQuOC0xMy4zNCwxNC44Wk0zMDQuNTksMjMzLjk0Yy01LjE4LDAtNy45LDQuNzEtNy45LDkuMzZ2NC4wM2MwLDQuNjUsMi43Miw5LjM2LDcuOSw5LjM2czcuOS00LjcxLDcuOS05LjM2di00LjAzYzAtNC42NS0yLjcyLTkuMzYtNy45LTkuMzZaIi8+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTE2OS4yNCwyODAuNzloLTUuNDR2LTEwLjYyYzAtNi40MywxMS45OC0xMy4zMiwyMC40MS0xMy4zMiw2LjI0LDAsMTIuNDUsMy4yNiwxNS44OCw2LjA1bC0zLjQzLDQuMjJjLTIuODYtMi4zMy03Ljk3LTQuODMtMTIuNDUtNC44My03LjA4LDAtMTQuODMsNS44Ni0xNC45OCw3Ljg5djEwLjYxWiIvPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xODQuMjMsMjYyLjEzYy03LjYxLDAtMTMuMzQtNi4zNi0xMy4zNC0xNC44di00LjAzYzAtOC40NCw1LjczLTE0LjgsMTMuMzQtMTQuOHMxMy4zNCw2LjM2LDEzLjM0LDE0Ljh2NC4wM2MwLDguNDQtNS43MywxNC44LTEzLjM0LDE0LjhaTTE4NC4yMywyMzMuOTRjLTUuMTgsMC03LjksNC43MS03LjksOS4zNnY0LjAzYzAsNC42NSwyLjcyLDkuMzYsNy45LDkuMzZzNy45LTQuNzEsNy45LTkuMzZ2LTQuMDNjMC00LjY1LTIuNzItOS4zNi03LjktOS4zNloiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjk5LjkzLDMyOC4xNGMtMi42MiwwLTUuMDgtMS4wMi02LjkzLTIuODdsLTMwLjA0LTMwLjA0LDMuODUtMy44NSwzMC4wNCwzMC4wNGMxLjY0LDEuNjUsNC41MiwxLjY1LDYuMTYsMGwyLjUxLTIuNWMxLjctMS43LDEuNy00LjQ3LDAtNi4xN2wtMzAuMDQtMzAuMDQsMy44NS0zLjg1LDMwLjA0LDMwLjA0YzMuODIsMy44MiwzLjgyLDEwLjA0LDAsMTMuODZsLTIuNTEsMi41Yy0xLjg1LDEuODUtNC4zMSwyLjg3LTYuOTMsMi44N1oiLz4KPC9zdmc+","Education.svg":"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MDAgNTAwIj4KICA8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMzAuOC4yLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogMi4xLjQgQnVpbGQgNykgIC0tPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuc3QwIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjQ4LjU0LDI1Ny4yOWMtLjIxLDAtLjQxLS4wNC0uNi0uMTNsLTMyLjA4LTE0LjU4Yy0uNTItLjI0LS44NS0uNzUtLjg1LTEuMzNzLjMzLTEuMDkuODUtMS4zM2wzMi4wOC0xNC41OGMuMzgtLjE3LjgzLS4xNywxLjIxLDBsMzIuMDgsMTQuNThjLjUyLjI0Ljg1Ljc1Ljg1LDEuMzNzLS4zMywxLjA5LS44NSwxLjMzbC0zMi4wOCwxNC41OGMtLjE5LjA5LS40LjEzLS42LjEzWk0yMTkuOTksMjQxLjI1bDI4LjU1LDEyLjk4LDI4LjU1LTEyLjk4LTI4LjU1LTEyLjk4LTI4LjU1LDEyLjk4WiIvPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yNDguMTUsMjc0Ljc3Yy03LjA1LDAtMTMuOTYtMS43OC0yMC43LTUuMzMtLjQ4LS4yNS0uNzgtLjc1LS43OC0xLjI5di0yMS4wOGMwLS44MS42NS0xLjQ2LDEuNDYtMS40NnMxLjQ2LjY1LDEuNDYsMS40NnYyMC4xOWMxMi4xMSw2LjExLDI0Ljg1LDYuMDksMzcuOTEtLjAzdi0yMC4xNmMwLS44MS42NS0xLjQ2LDEuNDYtMS40NnMxLjQ2LjY1LDEuNDYsMS40NnYyMS4wOGMwLC41Ni0uMzIsMS4wNy0uODIsMS4zMS03LjI1LDMuNTQtMTQuNDEsNS4zMS0yMS40NSw1LjMxWiIvPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yODAuNjIsMjY4Ljk1Yy0uODEsMC0xLjQ2LS42NS0xLjQ2LTEuNDZ2LTI2LjI0YzAtLjgxLjY1LTEuNDYsMS40Ni0xLjQ2czEuNDYuNjUsMS40NiwxLjQ2djI2LjI0YzAsLjgxLS42NSwxLjQ2LTEuNDYsMS40NloiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjgwLjYyLDI3NC43OWMtMi40MSwwLTQuMzctMS45Ni00LjM3LTQuMzcsMC0yLjQxLDEuOTYtNC4zNyw0LjM3LTQuMzcsMi40MSwwLDQuMzcsMS45Niw0LjM3LDQuMzcsMCwyLjQxLTEuOTYsNC4zNy00LjM3LDQuMzdaTTI4MC42MiwyNjguOTVjLS44LDAtMS40Ni42NS0xLjQ2LDEuNDZzLjY1LDEuNDYsMS40NiwxLjQ2Yy44LDAsMS40Ni0uNjUsMS40Ni0xLjQ2LDAtLjgtLjY1LTEuNDYtMS40Ni0xLjQ2WiIvPgo8L3N2Zz4=","customer-care-specialist_1.svg":"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJhIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTU1Ij48cG9seWdvbiBwb2ludHM9IjQ1LjQgOTQgMTEgOTQgMTEgNjIuMiAzNS45IDYyLjIgMzUuOSA2Ni4xIDE0LjkgNjYuMSAxNC45IDkwLjEgNDEuNSA5MC4xIDQxLjUgNzkuNCA0NS40IDc5LjQgNDUuNCA5NCIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cG9seWdvbiBwb2ludHM9IjI4LjMgODcuMyAxOS4yIDc4LjIgMjIgNzUuNCAyOC4xIDgxLjYgNDQuNiA2Mi44IDQ3LjUgNjUuNCAyOC4zIDg3LjMiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHBvbHlnb24gcG9pbnRzPSI0NS40IDEzNC43IDExIDEzNC43IDExIDEwMi44IDM1LjkgMTAyLjggMzUuOSAxMDYuNyAxNC45IDEwNi43IDE0LjkgMTMwLjggNDEuNSAxMzAuOCA0MS41IDEyMCA0NS40IDEyMCA0NS40IDEzNC43IiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwb2x5Z29uIHBvaW50cz0iMjguMyAxMjggMTkuMiAxMTguOSAyMiAxMTYuMSAyOC4xIDEyMi4zIDQ0LjYgMTAzLjUgNDcuNSAxMDYuMSAyOC4zIDEyOCIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cG9seWdvbiBwb2ludHM9IjQ1LjQgNTMuNCAxMSA1My40IDExIDIxLjUgMzUuOSAyMS41IDM1LjkgMjUuNCAxNC45IDI1LjQgMTQuOSA0OS41IDQxLjUgNDkuNSA0MS41IDM4LjcgNDUuNCAzOC43IDQ1LjQgNTMuNCIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cG9seWdvbiBwb2ludHM9IjI4LjMgNDYuNyAxOS4yIDM3LjYgMjIgMzQuOCAyOC4xIDQwLjkgNDQuNiAyMi4yIDQ3LjUgMjQuOCAyOC4zIDQ2LjciIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHBhdGggZD0iTTk2LjgsMTAxLjd2LTMuOWM0LjUsMCw4LjItNC41LDguMi04LjJ2LTIyLjljMC02LjctMTUuMi0xMC44LTIzLjUtMTAuOHMtMjMuNSw0LjEtMjMuNSwxMC44djIyLjljMCwzLjcsMy43LDguMiw4LjIsOC4ydjMuOWMtNi4zLDAtMTIuMS01LjgtMTIuMS0xMi4xdi0yMi45YzAtMTAuMiwxOC4xLTE0LjcsMjcuNC0xNC43czI3LjQsNC40LDI3LjQsMTQuN3YyMi45YzAsNi4zLTUuOCwxMi4xLTEyLjEsMTIuMWgwWiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cGF0aCBkPSJNODEuNiw0OC4zYy03LDAtMTIuMS01LjEtMTIuMS0xMi4xdi01LjFjMC03LDUuMS0xMi4xLDEyLjEtMTIuMXMxMi4xLDUuMSwxMi4xLDEyLjF2NS4xYzAsNy01LjEsMTIuMS0xMi4xLDEyLjFaTTgxLjYsMjIuOWMtNC45LDAtOC4yLDMuMy04LjIsOC4ydjUuMWMwLDQuOSwzLjMsOC4yLDguMiw4LjJzOC4yLTMuMyw4LjItOC4ydi01LjFjMC00LjktMy4zLTguMi04LjItOC4yWiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cmVjdCB4PSI5NC45IiB5PSI3MS44IiB3aWR0aD0iMy45IiBoZWlnaHQ9IjY2LjEiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHJlY3QgeD0iNjQuNCIgeT0iNzEuOCIgd2lkdGg9IjMuOSIgaGVpZ2h0PSI2Ni4xIiBzdHlsZT0iZmlsbDojZmZmOyIvPjxyZWN0IHg9Ijc5LjYiIHk9Ijk3LjIiIHdpZHRoPSIzLjkiIGhlaWdodD0iNDAuNyIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48L3N2Zz4=","account-advisor.svg":"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJhIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDAgMTQ3Ij48cmVjdCB4PSI0MC41IiB5PSIxMjcuNyIgd2lkdGg9Ijc5LjciIGhlaWdodD0iNC4yIiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwYXRoIGQ9Ik0xNy45LDEzNS4zaC00LjJ2LTIyYzAtNy41LDUuMy0xMy4xLDEyLjQtMTMuMWgxMmwxMy44LDE2LjVoMjAuMWwuMywxLjhjMCwuMi43LDUuNS0yLjcsOS40LTIuMywyLjYtNS44LDQtMTAuNCw0aC0xNy40bC0xMS4zLTExLjYsMy0yLjksMTAsMTAuNGgxNS42YzMuMywwLDUuOC0uOSw3LjItMi41LDEuMi0xLjMsMS42LTMsMS43LTQuM2gtMTguMWwtMTMuOC0xNi41aC0xMGMtNC43LDAtOC4yLDMuNy04LjIsOC45djIyaDBaIiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwYXRoIGQ9Ik0zMC45LDk2LjFjLTgsMC0xNC41LTYuMi0xNC41LTEzLjl2LTMuOWMwLTcuNyw2LjUtMTMuOSwxNC41LTEzLjlzMTQuNSw2LjIsMTQuNSwxMy45djMuOWMwLDcuNy02LjUsMTMuOS0xNC41LDEzLjlaTTMwLjksNjguNmMtNS42LDAtMTAuMyw0LjMtMTAuMyw5Ljd2My45YzAsNS4zLDQuNiw5LjcsMTAuMyw5LjdzMTAuMy00LjMsMTAuMy05Ljd2LTMuOWMwLTUuMy00LjYtOS43LTEwLjMtOS43WiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cG9seWdvbiBwb2ludHM9IjExMC42IDEyMy42IDc5IDEyMy42IDc5IDExOS40IDEwNy43IDExOS40IDExOS4yIDkwLjYgNzQuMyA5MC42IDY2LjQgMTExLjMgNjIuNCAxMDkuOCA3MS40IDg2LjQgMTI1LjQgODYuNCAxMTAuNiAxMjMuNiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cmVjdCB4PSI2OCIgeT0iMzkuNyIgd2lkdGg9IjMzIiBoZWlnaHQ9IjQuMiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cmVjdCB4PSI2OCIgeT0iMjguNyIgd2lkdGg9IjMzIiBoZWlnaHQ9IjQuMiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cmVjdCB4PSI2OCIgeT0iNTAuNyIgd2lkdGg9IjE5LjIiIGhlaWdodD0iNC4yIiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwYXRoIGQ9Ik01NC42LDc5LjZjLTEsMC0yLS40LTIuOC0xLjItMS4zLTEuMy0xLjgtMy4zLTEuMi01LjIsMS40LTQuNSwyLjgtOS4yLDMuNi0xMy45LTUtNS4xLTcuNy0xMS4yLTcuNy0xNy42LDAtMTYuMywxNy42LTI5LjYsMzkuMi0yOS42czM5LjIsMTMuMywzOS4yLDI5LjYtMTcuNiwyOS42LTM5LjIsMjkuNi04LjUtLjUtMTIuNi0xLjZjLTQuNyw0LjMtMTAuNiw3LjUtMTcuNSw5LjctLjQuMS0uOC4yLTEuMS4yaDBaTTg1LjksMTYuNGMtMTkuMywwLTM1LDExLjQtMzUsMjUuNHMyLjUsMTAuOSw3LjIsMTUuM2wuOC44LS4yLDEuMWMtLjgsNS4zLTIuNCwxMC42LTMuOSwxNS42LS4xLjUsMCwuOS4xLjksNi40LTIuMSwxMi01LjMsMTYuMy05LjZsLjktLjksMS4yLjNjNC4xLDEuMiw4LjQsMS44LDEyLjYsMS44LDE5LjMsMCwzNS0xMS40LDM1LTI1LjRzLTE1LjctMjUuNC0zNS0yNS40aDBaIiBzdHlsZT0iZmlsbDojZmZmOyIvPjwvc3ZnPg==","survey-team.svg":"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJhIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNzAgMTQyIj48cGF0aCBkPSJNODEuOSw1MC45Yy04LjMsMC0xNC44LTYuOS0xNC44LTE1Ljd2LTQuNWMwLTguOCw2LjUtMTUuNywxNC44LTE1LjdzMTQuOCw2LjksMTQuOCwxNS43djQuNWMwLDguOC02LjUsMTUuNy0xNC44LDE1LjdoMFpNODEuOSwxOS43Yy01LjcsMC0xMC4yLDQuOS0xMC4yLDExLjF2NC41YzAsNi4yLDQuNSwxMS4xLDEwLjIsMTEuMXMxMC4yLTQuOSwxMC4yLTExLjF2LTQuNWMwLTYuMi00LjUtMTEuMS0xMC4yLTExLjFaIiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwYXRoIGQ9Ik0xMDkuMiw3MC42aC00LjV2LTkuNWMwLTYuNi0xNC0xMC4yLTIxLjItMTAuMnMtMjEuMiwzLjYtMjEuMiwxMC4ydjkuNWgtNC41di05LjVjMC0xMC40LDE2LjgtMTQuOCwyNS43LTE0LjhzMjUuNyw0LjMsMjUuNywxNC44djkuNVoiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHBhdGggZD0iTTg1LDEwNy4yYy04LjMsMC0xNC44LTYuOS0xNC44LTE1Ljd2LTQuNWMwLTguOCw2LjUtMTUuNywxNC44LTE1LjdzMTQuOCw2LjksMTQuOCwxNS43djQuNWMwLDguOC02LjUsMTUuNy0xNC44LDE1LjdoMFpNODUsNzZjLTUuNywwLTEwLjIsNC45LTEwLjIsMTEuMXY0LjVjMCw2LjIsNC41LDExLjEsMTAuMiwxMS4xczEwLjItNC45LDEwLjItMTEuMXYtNC41YzAtNi4yLTQuNS0xMS4xLTEwLjItMTEuMVoiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHBhdGggZD0iTTExMi4zLDEyNi45aC00LjV2LTkuNWMwLTYuNi0xNC0xMC4yLTIxLjItMTAuMnMtMjEuMiwzLjYtMjEuMiwxMC4ydjkuNWgtNC41di05LjVjMC0xMC40LDE2LjgtMTQuOCwyNS43LTE0LjhzMjUuNyw0LjMsMjUuNywxNC44djkuNVoiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHBhdGggZD0iTTEzMS45LDc5LjFjLTguMywwLTE0LjgtNi45LTE0LjgtMTUuN3YtNC41YzAtOC44LDYuNS0xNS43LDE0LjgtMTUuN3MxNC44LDYuOSwxNC44LDE1Ljd2NC41YzAsOC44LTYuNSwxNS43LTE0LjgsMTUuN1pNMTMxLjksNDcuOGMtNS44LDAtMTAuMiw0LjktMTAuMiwxMS4xdjQuNWMwLDYuMiw0LjUsMTEuMSwxMC4yLDExLjFzMTAuMi00LjksMTAuMi0xMS4xdi00LjVjMC02LjItNC41LTExLjEtMTAuMi0xMS4xWiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cGF0aCBkPSJNMTU5LjIsOTguN2gtNC41di05LjVjMC02LjYtMTQtMTAuMi0yMS4yLTEwLjJzLTIxLjIsMy42LTIxLjIsMTAuMnY5LjVoLTQuNXYtOS41YzAtMTAuNCwxNi43LTE0LjgsMjUuNy0xNC44czI1LjcsNC4zLDI1LjcsMTQuOHY5LjVaIiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwYXRoIGQ9Ik0zNSw3OS4xYy04LjMsMC0xNC44LTYuOS0xNC44LTE1Ljd2LTQuNWMwLTguOCw2LjUtMTUuNywxNC44LTE1LjdzMTQuOCw2LjksMTQuOCwxNS43djQuNWMwLDguOC02LjUsMTUuNy0xNC44LDE1LjdaTTM1LDQ3LjhjLTUuOCwwLTEwLjIsNC45LTEwLjIsMTEuMXY0LjVjMCw2LjIsNC41LDExLjEsMTAuMiwxMS4xczEwLjItNC45LDEwLjItMTEuMXYtNC41YzAtNi4yLTQuNS0xMS4xLTEwLjItMTEuMVoiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHBhdGggZD0iTTYyLjIsOTguN2gtNC41di05LjVjMC02LjYtMTQtMTAuMi0yMS4yLTEwLjJzLTIxLjIsMy42LTIxLjIsMTAuMnY5LjVoLTQuNXYtOS41YzAtMTAuNCwxNi44LTE0LjgsMjUuNy0xNC44czI1LjcsNC4zLDI1LjcsMTQuOHY5LjVoMFoiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PC9zdmc+","clinical-staff.svg":"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJhIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMzIgMTQ2Ij48cGF0aCBkPSJNOTkuMyw4My40Yy0xLjEsMC0yLjItLjgtMi41LTEuOWwtNC42LTE3LjRjLS4yLTEuMi0uOS0xLjktMS44LTIuMmwtOS40LTMuMWMtLjktLjMtMS45LDAtMi42LjZsLTEwLjYsMTAuN2MtMSwxLTIuNywxLTMuNiwwbC0xMC42LTEwLjdjLS43LS43LTEuNy0uOS0yLjYtLjZsLTkuNCwzLjFjLS45LjMtMS42LDEuMS0xLjcsMmwtNC43LDE3LjdjLS40LDEuNC0xLjgsMi4yLTMuMSwxLjgtMS40LS40LTIuMi0xLjgtMS44LTMuMWw0LjYtMTcuNGMuNC0yLjYsMi40LTQuOSw1LjEtNS44bDkuNC0zLjFjMi44LS45LDUuOC0uMiw3LjksMS45bDguNyw4LjksOC43LTguOWMyLjEtMi4xLDUuMS0yLjgsNy45LTEuOWw5LjQsMy4xYzIuNy45LDQuNywzLjIsNS4xLDZsNC42LDE3LjJjLjQsMS40LS41LDIuOC0xLjgsMy4xLS4yLDAtLjQsMC0uNywwIiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwYXRoIGQ9Ik02Niw0Ny4zYy04LjUsMC0xNS40LTcuMi0xNS40LTE2di0zLjhjMC04LjgsNi45LTE2LDE1LjQtMTZzMTUuNCw3LjIsMTUuNCwxNnYzLjhjMCw4LjgtNi45LDE2LTE1LjQsMTZNNjYsMTYuNmMtNS42LDAtMTAuMiw0LjktMTAuMiwxMC45djMuOGMwLDYsNC42LDEwLjksMTAuMiwxMC45czEwLjItNC45LDEwLjItMTAuOXYtMy44YzAtNi00LjYtMTAuOS0xMC4yLTEwLjkiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHBhdGggZD0iTTEwNC40LDEzNC41SDI3LjZjLTEuMiwwLTIuMi0uOC0yLjUtMS45bC00LjctMTguN2MtNi4xLTEtMTAuOC02LjMtMTAuOC0xMi42di0xMC4yYzAtMS40LDEuMS0yLjYsMi42LTIuNmgxMDcuNWMxLjQsMCwyLjYsMS4xLDIuNiwyLjZ2MTAuMmMwLDYuNC00LjcsMTEuNy0xMC44LDEyLjZsLTQuNywxOC43Yy0uMywxLjEtMS4zLDEuOS0yLjUsMS45TTI5LjYsMTI5LjRoNzIuOGw0LjYtMTguNWMuMy0xLjEsMS4zLTEuOSwyLjUtMS45LDQuMiwwLDcuNy0zLjQsNy43LTcuN3YtNy43SDE0Ljh2Ny43YzAsNC4yLDMuNCw3LjcsNy43LDcuN3MyLjIuOCwyLjUsMS45bDQuNiwxOC41WiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48L3N2Zz4=","regulatory-team.svg":"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJhIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMzQgMTM4Ij48cGF0aCBkPSJNMTI1LjcsNTMuNUg4LjNjLTEuNCwwLTIuNi0xLjEtMi42LTIuNnYtNi4zYzAtMy40LDIuMi02LjMsNS40LTcuM2w1Mi45LTI4LjljMi0uOCwzLjgtLjgsNS41LS4ybDUzLjMsMjljMy4yLDEsNS40LDMuOSw1LjQsNy4zdjYuM2MwLDEuNC0xLjEsMi42LTIuNSwyLjZNMTAuOSw0OC40aDExMi4zdi0zLjdjMC0xLjItLjgtMi4yLTEuOS0yLjUtLjIsMC0uNC0uMS0uNi0uMmwtNTMuMi0yOWMtLjIsMC0uOCwwLTEuMy4yTDEzLjQsNDJjLS4yLjEtLjQuMi0uNi4yLTEuMS4zLTEuOSwxLjMtMS45LDIuNXYzLjdoMFoiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHBhdGggZD0iTTMzLjgsMTEyLjJjLTEuNCwwLTIuNi0xLjEtMi42LTIuNnYtNTguN2MwLTEuNCwxLjEtMi42LDIuNi0yLjZzMi42LDEuMSwyLjYsMi42djU4LjdjMCwxLjQtMS4xLDIuNi0yLjYsMi42IiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwYXRoIGQ9Ik0xOC41LDExMi4yYy0xLjQsMC0yLjYtMS4xLTIuNi0yLjZ2LTU4LjdjMC0xLjQsMS4xLTIuNiwyLjYtMi42czIuNiwxLjEsMi42LDIuNnY1OC43YzAsMS40LTEuMSwyLjYtMi42LDIuNiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cGF0aCBkPSJNMTE1LjUsMTEyLjJjLTEuNCwwLTIuNS0xLjEtMi41LTIuNnYtNTguN2MwLTEuNCwxLjEtMi42LDIuNS0yLjZzMi41LDEuMSwyLjUsMi42djU4LjdjMCwxLjQtMS4xLDIuNi0yLjUsMi42IiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwYXRoIGQ9Ik0xMDAuMiwxMTIuMmMtMS40LDAtMi41LTEuMS0yLjUtMi42di01OC43YzAtMS40LDEuMS0yLjYsMi41LTIuNnMyLjUsMS4xLDIuNSwyLjZ2NTguN2MwLDEuNC0xLjEsMi42LTIuNSwyLjYiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHBhdGggZD0iTTc0LjYsMTEyLjJjLTEuNCwwLTIuNi0xLjEtMi42LTIuNnYtNTguN2MwLTEuNCwxLjItMi42LDIuNi0yLjZzMi41LDEuMSwyLjUsMi42djU4LjdjMCwxLjQtMS4xLDIuNi0yLjUsMi42IiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwYXRoIGQ9Ik01OS40LDExMi4yYy0xLjQsMC0yLjYtMS4xLTIuNi0yLjZ2LTU4LjdjMC0xLjQsMS4xLTIuNiwyLjYtMi42czIuNiwxLjEsMi42LDIuNnY1OC43YzAsMS40LTEuMSwyLjYtMi42LDIuNiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cGF0aCBkPSJNMTIwLjYsMTMwLjFIMTMuNGMtNC4yLDAtNy43LTMuNC03LjctNy42di0xMC4yYzAtMS40LDEuMS0yLjYsMi42LTIuNmgxMTcuNGMxLjQsMCwyLjUsMS4xLDIuNSwyLjZ2MTAuMmMwLDQuMi0zLjQsNy42LTcuNyw3LjZNMTAuOSwxMTQuOHY3LjdjMCwxLjQsMS4xLDIuNiwyLjYsMi42aDEwNy4yYzEuNCwwLDIuNS0xLjEsMi41LTIuNnYtNy43SDEwLjloMFoiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PC9zdmc+"};
-    </script>
-    <script>
-    /* ---------- EDIT HERE ---------- */
-    const SEGMENTS = [ // angle = center of wedge (deg, 0 = right, -90 = top)
-      {id:'care',  label:['CUSTOMER CARE','SPECIALIST'], angle:-90, color:'#75a2c0', icon:'customer-care-specialist_1.svg'},
-      {id:'acct',  label:['ACCOUNT','ADVISOR'],          angle:-18, color:'#2E9E75', icon:'account-advisor.svg'},
-      {id:'survey',label:['SURVEY','TEAM'],              angle:54,  color:'#93ca64', icon:'survey-team.svg'},
-      {id:'clin',  label:['CLINICAL','STAFF'],           angle:126, color:'#0081a0', icon:'clinical-staff.svg'},
-      {id:'reg',   label:['REGULATORY','TEAM'],          angle:198, color:'#73c3c3', icon:'regulatory-team.svg'}
-    ];
-    /* ------------------------------- */
-    const asset=f=>(window.ASSETS&&ASSETS[f])||f; // resolves image file names (see preview-assets block)
-    document.querySelectorAll('img[src]').forEach(i=>{i.src=asset(i.getAttribute('src'))});
-    const NS='http://www.w3.org/2000/svg', C=250, R_IN=78, R_W=190, R_O1=196, R_O2=244;
-    const rad=d=>d*Math.PI/180, pt=(r,a)=>[C+r*Math.cos(rad(a)),C+r*Math.sin(rad(a))];
-    const f=n=>n.toFixed(2);
-    function wedge(r1,r2,a1,a2){const [x1,y1]=pt(r2,a1),[x2,y2]=pt(r2,a2),[x3,y3]=pt(r1,a2),[x4,y4]=pt(r1,a1);
-     return `M${f(x1)} ${f(y1)}A${r2} ${r2} 0 0 1 ${f(x2)} ${f(y2)}L${f(x3)} ${f(y3)}A${r1} ${r1} 0 0 0 ${f(x4)} ${f(y4)}Z`}
-    function el(tag,attrs,parent,html){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(html)e.innerHTML=html;parent.appendChild(e);return e}
-    const svg=document.getElementById('wheel');
-    const defs=el('defs',{},svg);
-    // Icons whose artwork sits inside a 500x500 artboard: crop to the drawing (x y w h of the artwork)
-    const BOX={'YourNeeds.svg':[162.8,170.85,163.2,158.3],'Education.svg':[214,224.2,72,51.6]};
-    function icon(parent,file,x,y,w,h){
-      const b=BOX[file], s=el('svg',{x,y,width:w,height:h,viewBox:b.join(' '),preserveAspectRatio:'xMidYMid meet'},parent);
-      el('image',{href:asset(file),x:0,y:0,width:500,height:500},s);
-      return s;
+  </div>
+  </div>
+  <script>
+  (function(){
+  /* ICON FILES: embedded below so the widget works on its own.
+     To use files from your Media Library instead, replace any "data:..." value with the file URL,
+     e.g. "account-advisor.svg":"https://yoursite.com/wp-content/uploads/2026/11/account-advisor.svg"
+     (WordPress needs an SVG-upload plugin such as Safe SVG for that). */
+  const ASSETS={"YourNeeds.svg":"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MDAgNTAwIj4KICA8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMzAuOC4yLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogMi4xLjQgQnVpbGQgNykgIC0tPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuc3QwIHsKICAgICAgICBmaWxsOiAjMDA4MWEwOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjY0LjgzLDI4NC4zM2gtNS40NHYtMTAuNjJjLS4xNS0yLjAyLTcuOS03Ljg4LTE0Ljk4LTcuODhzLTE0Ljg0LDUuODYtMTQuOTksNy44OXYxMC42MWgtNS40NHYtMTAuNjJjMC02LjQzLDEyLTEzLjMyLDIwLjQzLTEzLjMyczIwLjQxLDYuODksMjAuNDEsMTMuMzJ2MTAuNjJaIi8+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTI0NC40MSwzMDEuMjFjLTIyLjk3LDAtNDEuNjYtMTguNjktNDEuNjYtNDEuNjZzMTguNjktNDEuNjYsNDEuNjYtNDEuNjYsNDEuNjYsMTguNjksNDEuNjYsNDEuNjYtMTguNjgsNDEuNjYtNDEuNjYsNDEuNjZaTTI0NC40MSwyMjMuMzNjLTE5Ljk4LDAtMzYuMjMsMTYuMjUtMzYuMjMsMzYuMjJzMTYuMjUsMzYuMjIsMzYuMjMsMzYuMjIsMzYuMjItMTYuMjUsMzYuMjItMzYuMjItMTYuMjUtMzYuMjItMzYuMjItMzYuMjJaIi8+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTI0NC40MSwyNjUuNjdjLTcuNjEsMC0xMy4zNC02LjM2LTEzLjM0LTE0Ljh2LTQuMDNjMC04LjQ0LDUuNzQtMTQuOCwxMy4zNC0xNC44czEzLjM0LDYuMzYsMTMuMzQsMTQuOHY0LjAzYzAsOC40NC01LjczLDE0LjgtMTMuMzQsMTQuOFpNMjQ0LjQxLDIzNy40OGMtNS4xOSwwLTcuOTEsNC43MS03LjkxLDkuMzZ2NC4wM2MwLDQuNjUsMi43Miw5LjM2LDcuOTEsOS4zNnM3LjktNC43MSw3LjktOS4zNnYtNC4wM2MwLTQuNjUtMi43Mi05LjM2LTcuOS05LjM2WiIvPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMDEuMSwyMjQuMTVoLTUuNDR2LTEwLjYyYzAtNi40MywxMS45OC0xMy4zMiwyMC40Mi0xMy4zMiw2LjU2LDAsMTMuNzEsMy43MywxNy4zOSw3LjQxLDIuMDEsMi4wMSwzLjAzLDQsMy4wMiw1LjkxaC01LjQ0czIuNzIsMCwyLjcyLDBoLTIuNzJjLS4xNS0yLjAyLTcuOS03Ljg3LTE0Ljk4LTcuODdzLTE0Ljg0LDUuODUtMTQuOTksNy44OHYxMC42MVoiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjE2LjA5LDIwNS40OGMtNy42MSwwLTEzLjM0LTYuMzYtMTMuMzQtMTQuOHYtNC4wM2MwLTguNDQsNS43My0xNC44LDEzLjM0LTE0LjhzMTMuMzQsNi4zNiwxMy4zNCwxNC44djQuMDNjMCw4LjQ0LTUuNzMsMTQuOC0xMy4zNCwxNC44Wk0yMTYuMDksMTc3LjNjLTUuMTgsMC03LjksNC43MS03LjksOS4zNnY0LjAzYzAsNC42NSwyLjcyLDkuMzYsNy45LDkuMzZzNy45LTQuNzEsNy45LTkuMzZ2LTQuMDNjMC00LjY1LTIuNzItOS4zNi03LjktOS4zNloiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjkzLjE1LDIyNC4xNWgtNS40NHYtMTAuNjJjLS4xNS0yLjAyLTcuOS03Ljg3LTE0Ljk5LTcuODdzLTE0LjgzLDUuODUtMTQuOTgsNy44OGgtNS40NGMwLTYuNDQsMTEuOTgtMTMuMzIsMjAuNDEtMTMuMzJzMjAuNDIsNi44OSwyMC40MiwxMy4zMnYxMC42MloiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjcyLjczLDIwNS40OGMtNy42MSwwLTEzLjM0LTYuMzYtMTMuMzQtMTQuOHYtNC4wM2MwLTguNDQsNS43My0xNC44LDEzLjM0LTE0LjhzMTMuMzQsNi4zNiwxMy4zNCwxNC44djQuMDNjMCw4LjQ0LTUuNzMsMTQuOC0xMy4zNCwxNC44Wk0yNzIuNzMsMTc3LjNjLTUuMTgsMC03LjksNC43MS03LjksOS4zNnY0LjAzYzAsNC42NSwyLjcyLDkuMzYsNy45LDkuMzZzNy45LTQuNzEsNy45LTkuMzZ2LTQuMDNjMC00LjY1LTIuNzItOS4zNi03LjktOS4zNloiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzI1LjAyLDI4MC43OWgtNS40NHYtMTAuNjJjLS4xNS0yLjAyLTcuOS03Ljg4LTE0Ljk4LTcuODgtNC40OCwwLTkuNiwyLjUtMTIuNDUsNC44M2wtMy40My00LjIyYzMuNDMtMi43OSw5LjY1LTYuMDUsMTUuODktNi4wNSw4LjQzLDAsMjAuNDEsNi44OSwyMC40MSwxMy4zMnYxMC42MloiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzA0LjU5LDI2Mi4xM2MtNy42MSwwLTEzLjM0LTYuMzYtMTMuMzQtMTQuOHYtNC4wM2MwLTguNDQsNS43My0xNC44LDEzLjM0LTE0LjhzMTMuMzQsNi4zNiwxMy4zNCwxNC44djQuMDNjMCw4LjQ0LTUuNzMsMTQuOC0xMy4zNCwxNC44Wk0zMDQuNTksMjMzLjk0Yy01LjE4LDAtNy45LDQuNzEtNy45LDkuMzZ2NC4wM2MwLDQuNjUsMi43Miw5LjM2LDcuOSw5LjM2czcuOS00LjcxLDcuOS05LjM2di00LjAzYzAtNC42NS0yLjcyLTkuMzYtNy45LTkuMzZaIi8+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTE2OS4yNCwyODAuNzloLTUuNDR2LTEwLjYyYzAtNi40MywxMS45OC0xMy4zMiwyMC40MS0xMy4zMiw2LjI0LDAsMTIuNDUsMy4yNiwxNS44OCw2LjA1bC0zLjQzLDQuMjJjLTIuODYtMi4zMy03Ljk3LTQuODMtMTIuNDUtNC44My03LjA4LDAtMTQuODMsNS44Ni0xNC45OCw3Ljg5djEwLjYxWiIvPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xODQuMjMsMjYyLjEzYy03LjYxLDAtMTMuMzQtNi4zNi0xMy4zNC0xNC44di00LjAzYzAtOC40NCw1LjczLTE0LjgsMTMuMzQtMTQuOHMxMy4zNCw2LjM2LDEzLjM0LDE0Ljh2NC4wM2MwLDguNDQtNS43MywxNC44LTEzLjM0LDE0LjhaTTE4NC4yMywyMzMuOTRjLTUuMTgsMC03LjksNC43MS03LjksOS4zNnY0LjAzYzAsNC42NSwyLjcyLDkuMzYsNy45LDkuMzZzNy45LTQuNzEsNy45LTkuMzZ2LTQuMDNjMC00LjY1LTIuNzItOS4zNi03LjktOS4zNloiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjk5LjkzLDMyOC4xNGMtMi42MiwwLTUuMDgtMS4wMi02LjkzLTIuODdsLTMwLjA0LTMwLjA0LDMuODUtMy44NSwzMC4wNCwzMC4wNGMxLjY0LDEuNjUsNC41MiwxLjY1LDYuMTYsMGwyLjUxLTIuNWMxLjctMS43LDEuNy00LjQ3LDAtNi4xN2wtMzAuMDQtMzAuMDQsMy44NS0zLjg1LDMwLjA0LDMwLjA0YzMuODIsMy44MiwzLjgyLDEwLjA0LDAsMTMuODZsLTIuNTEsMi41Yy0xLjg1LDEuODUtNC4zMSwyLjg3LTYuOTMsMi44N1oiLz4KPC9zdmc+","Education.svg":"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MDAgNTAwIj4KICA8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMzAuOC4yLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogMi4xLjQgQnVpbGQgNykgIC0tPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuc3QwIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjQ4LjU0LDI1Ny4yOWMtLjIxLDAtLjQxLS4wNC0uNi0uMTNsLTMyLjA4LTE0LjU4Yy0uNTItLjI0LS44NS0uNzUtLjg1LTEuMzNzLjMzLTEuMDkuODUtMS4zM2wzMi4wOC0xNC41OGMuMzgtLjE3LjgzLS4xNywxLjIxLDBsMzIuMDgsMTQuNThjLjUyLjI0Ljg1Ljc1Ljg1LDEuMzNzLS4zMywxLjA5LS44NSwxLjMzbC0zMi4wOCwxNC41OGMtLjE5LjA5LS40LjEzLS42LjEzWk0yMTkuOTksMjQxLjI1bDI4LjU1LDEyLjk4LDI4LjU1LTEyLjk4LTI4LjU1LTEyLjk4LTI4LjU1LDEyLjk4WiIvPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yNDguMTUsMjc0Ljc3Yy03LjA1LDAtMTMuOTYtMS43OC0yMC43LTUuMzMtLjQ4LS4yNS0uNzgtLjc1LS43OC0xLjI5di0yMS4wOGMwLS44MS42NS0xLjQ2LDEuNDYtMS40NnMxLjQ2LjY1LDEuNDYsMS40NnYyMC4xOWMxMi4xMSw2LjExLDI0Ljg1LDYuMDksMzcuOTEtLjAzdi0yMC4xNmMwLS44MS42NS0xLjQ2LDEuNDYtMS40NnMxLjQ2LjY1LDEuNDYsMS40NnYyMS4wOGMwLC41Ni0uMzIsMS4wNy0uODIsMS4zMS03LjI1LDMuNTQtMTQuNDEsNS4zMS0yMS40NSw1LjMxWiIvPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yODAuNjIsMjY4Ljk1Yy0uODEsMC0xLjQ2LS42NS0xLjQ2LTEuNDZ2LTI2LjI0YzAtLjgxLjY1LTEuNDYsMS40Ni0xLjQ2czEuNDYuNjUsMS40NiwxLjQ2djI2LjI0YzAsLjgxLS42NSwxLjQ2LTEuNDYsMS40NloiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjgwLjYyLDI3NC43OWMtMi40MSwwLTQuMzctMS45Ni00LjM3LTQuMzcsMC0yLjQxLDEuOTYtNC4zNyw0LjM3LTQuMzcsMi40MSwwLDQuMzcsMS45Niw0LjM3LDQuMzcsMCwyLjQxLTEuOTYsNC4zNy00LjM3LDQuMzdaTTI4MC42MiwyNjguOTVjLS44LDAtMS40Ni42NS0xLjQ2LDEuNDZzLjY1LDEuNDYsMS40NiwxLjQ2Yy44LDAsMS40Ni0uNjUsMS40Ni0xLjQ2LDAtLjgtLjY1LTEuNDYtMS40Ni0xLjQ2WiIvPgo8L3N2Zz4=","customer-care-specialist_1.svg":"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJhIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTU1Ij48cG9seWdvbiBwb2ludHM9IjQ1LjQgOTQgMTEgOTQgMTEgNjIuMiAzNS45IDYyLjIgMzUuOSA2Ni4xIDE0LjkgNjYuMSAxNC45IDkwLjEgNDEuNSA5MC4xIDQxLjUgNzkuNCA0NS40IDc5LjQgNDUuNCA5NCIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cG9seWdvbiBwb2ludHM9IjI4LjMgODcuMyAxOS4yIDc4LjIgMjIgNzUuNCAyOC4xIDgxLjYgNDQuNiA2Mi44IDQ3LjUgNjUuNCAyOC4zIDg3LjMiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHBvbHlnb24gcG9pbnRzPSI0NS40IDEzNC43IDExIDEzNC43IDExIDEwMi44IDM1LjkgMTAyLjggMzUuOSAxMDYuNyAxNC45IDEwNi43IDE0LjkgMTMwLjggNDEuNSAxMzAuOCA0MS41IDEyMCA0NS40IDEyMCA0NS40IDEzNC43IiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwb2x5Z29uIHBvaW50cz0iMjguMyAxMjggMTkuMiAxMTguOSAyMiAxMTYuMSAyOC4xIDEyMi4zIDQ0LjYgMTAzLjUgNDcuNSAxMDYuMSAyOC4zIDEyOCIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cG9seWdvbiBwb2ludHM9IjQ1LjQgNTMuNCAxMSA1My40IDExIDIxLjUgMzUuOSAyMS41IDM1LjkgMjUuNCAxNC45IDI1LjQgMTQuOSA0OS41IDQxLjUgNDkuNSA0MS41IDM4LjcgNDUuNCAzOC43IDQ1LjQgNTMuNCIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cG9seWdvbiBwb2ludHM9IjI4LjMgNDYuNyAxOS4yIDM3LjYgMjIgMzQuOCAyOC4xIDQwLjkgNDQuNiAyMi4yIDQ3LjUgMjQuOCAyOC4zIDQ2LjciIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHBhdGggZD0iTTk2LjgsMTAxLjd2LTMuOWM0LjUsMCw4LjItNC41LDguMi04LjJ2LTIyLjljMC02LjctMTUuMi0xMC44LTIzLjUtMTAuOHMtMjMuNSw0LjEtMjMuNSwxMC44djIyLjljMCwzLjcsMy43LDguMiw4LjIsOC4ydjMuOWMtNi4zLDAtMTIuMS01LjgtMTIuMS0xMi4xdi0yMi45YzAtMTAuMiwxOC4xLTE0LjcsMjcuNC0xNC43czI3LjQsNC40LDI3LjQsMTQuN3YyMi45YzAsNi4zLTUuOCwxMi4xLTEyLjEsMTIuMWgwWiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cGF0aCBkPSJNODEuNiw0OC4zYy03LDAtMTIuMS01LjEtMTIuMS0xMi4xdi01LjFjMC03LDUuMS0xMi4xLDEyLjEtMTIuMXMxMi4xLDUuMSwxMi4xLDEyLjF2NS4xYzAsNy01LjEsMTIuMS0xMi4xLDEyLjFaTTgxLjYsMjIuOWMtNC45LDAtOC4yLDMuMy04LjIsOC4ydjUuMWMwLDQuOSwzLjMsOC4yLDguMiw4LjJzOC4yLTMuMyw4LjItOC4ydi01LjFjMC00LjktMy4zLTguMi04LjItOC4yWiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cmVjdCB4PSI5NC45IiB5PSI3MS44IiB3aWR0aD0iMy45IiBoZWlnaHQ9IjY2LjEiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHJlY3QgeD0iNjQuNCIgeT0iNzEuOCIgd2lkdGg9IjMuOSIgaGVpZ2h0PSI2Ni4xIiBzdHlsZT0iZmlsbDojZmZmOyIvPjxyZWN0IHg9Ijc5LjYiIHk9Ijk3LjIiIHdpZHRoPSIzLjkiIGhlaWdodD0iNDAuNyIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48L3N2Zz4=","account-advisor.svg":"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJhIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDAgMTQ3Ij48cmVjdCB4PSI0MC41IiB5PSIxMjcuNyIgd2lkdGg9Ijc5LjciIGhlaWdodD0iNC4yIiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwYXRoIGQ9Ik0xNy45LDEzNS4zaC00LjJ2LTIyYzAtNy41LDUuMy0xMy4xLDEyLjQtMTMuMWgxMmwxMy44LDE2LjVoMjAuMWwuMywxLjhjMCwuMi43LDUuNS0yLjcsOS40LTIuMywyLjYtNS44LDQtMTAuNCw0aC0xNy40bC0xMS4zLTExLjYsMy0yLjksMTAsMTAuNGgxNS42YzMuMywwLDUuOC0uOSw3LjItMi41LDEuMi0xLjMsMS42LTMsMS43LTQuM2gtMTguMWwtMTMuOC0xNi41aC0xMGMtNC43LDAtOC4yLDMuNy04LjIsOC45djIyaDBaIiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwYXRoIGQ9Ik0zMC45LDk2LjFjLTgsMC0xNC41LTYuMi0xNC41LTEzLjl2LTMuOWMwLTcuNyw2LjUtMTMuOSwxNC41LTEzLjlzMTQuNSw2LjIsMTQuNSwxMy45djMuOWMwLDcuNy02LjUsMTMuOS0xNC41LDEzLjlaTTMwLjksNjguNmMtNS42LDAtMTAuMyw0LjMtMTAuMyw5Ljd2My45YzAsNS4zLDQuNiw5LjcsMTAuMyw5LjdzMTAuMy00LjMsMTAuMy05Ljd2LTMuOWMwLTUuMy00LjYtOS43LTEwLjMtOS43WiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cG9seWdvbiBwb2ludHM9IjExMC42IDEyMy42IDc5IDEyMy42IDc5IDExOS40IDEwNy43IDExOS40IDExOS4yIDkwLjYgNzQuMyA5MC42IDY2LjQgMTExLjMgNjIuNCAxMDkuOCA3MS40IDg2LjQgMTI1LjQgODYuNCAxMTAuNiAxMjMuNiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cmVjdCB4PSI2OCIgeT0iMzkuNyIgd2lkdGg9IjMzIiBoZWlnaHQ9IjQuMiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cmVjdCB4PSI2OCIgeT0iMjguNyIgd2lkdGg9IjMzIiBoZWlnaHQ9IjQuMiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cmVjdCB4PSI2OCIgeT0iNTAuNyIgd2lkdGg9IjE5LjIiIGhlaWdodD0iNC4yIiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwYXRoIGQ9Ik01NC42LDc5LjZjLTEsMC0yLS40LTIuOC0xLjItMS4zLTEuMy0xLjgtMy4zLTEuMi01LjIsMS40LTQuNSwyLjgtOS4yLDMuNi0xMy45LTUtNS4xLTcuNy0xMS4yLTcuNy0xNy42LDAtMTYuMywxNy42LTI5LjYsMzkuMi0yOS42czM5LjIsMTMuMywzOS4yLDI5LjYtMTcuNiwyOS42LTM5LjIsMjkuNi04LjUtLjUtMTIuNi0xLjZjLTQuNyw0LjMtMTAuNiw3LjUtMTcuNSw5LjctLjQuMS0uOC4yLTEuMS4yaDBaTTg1LjksMTYuNGMtMTkuMywwLTM1LDExLjQtMzUsMjUuNHMyLjUsMTAuOSw3LjIsMTUuM2wuOC44LS4yLDEuMWMtLjgsNS4zLTIuNCwxMC42LTMuOSwxNS42LS4xLjUsMCwuOS4xLjksNi40LTIuMSwxMi01LjMsMTYuMy05LjZsLjktLjksMS4yLjNjNC4xLDEuMiw4LjQsMS44LDEyLjYsMS44LDE5LjMsMCwzNS0xMS40LDM1LTI1LjRzLTE1LjctMjUuNC0zNS0yNS40aDBaIiBzdHlsZT0iZmlsbDojZmZmOyIvPjwvc3ZnPg==","survey-team.svg":"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJhIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNzAgMTQyIj48cGF0aCBkPSJNODEuOSw1MC45Yy04LjMsMC0xNC44LTYuOS0xNC44LTE1Ljd2LTQuNWMwLTguOCw2LjUtMTUuNywxNC44LTE1LjdzMTQuOCw2LjksMTQuOCwxNS43djQuNWMwLDguOC02LjUsMTUuNy0xNC44LDE1LjdoMFpNODEuOSwxOS43Yy01LjcsMC0xMC4yLDQuOS0xMC4yLDExLjF2NC41YzAsNi4yLDQuNSwxMS4xLDEwLjIsMTEuMXMxMC4yLTQuOSwxMC4yLTExLjF2LTQuNWMwLTYuMi00LjUtMTEuMS0xMC4yLTExLjFaIiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwYXRoIGQ9Ik0xMDkuMiw3MC42aC00LjV2LTkuNWMwLTYuNi0xNC0xMC4yLTIxLjItMTAuMnMtMjEuMiwzLjYtMjEuMiwxMC4ydjkuNWgtNC41di05LjVjMC0xMC40LDE2LjgtMTQuOCwyNS43LTE0LjhzMjUuNyw0LjMsMjUuNywxNC44djkuNVoiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHBhdGggZD0iTTg1LDEwNy4yYy04LjMsMC0xNC44LTYuOS0xNC44LTE1Ljd2LTQuNWMwLTguOCw2LjUtMTUuNywxNC44LTE1LjdzMTQuOCw2LjksMTQuOCwxNS43djQuNWMwLDguOC02LjUsMTUuNy0xNC44LDE1LjdoMFpNODUsNzZjLTUuNywwLTEwLjIsNC45LTEwLjIsMTEuMXY0LjVjMCw2LjIsNC41LDExLjEsMTAuMiwxMS4xczEwLjItNC45LDEwLjItMTEuMXYtNC41YzAtNi4yLTQuNS0xMS4xLTEwLjItMTEuMVoiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHBhdGggZD0iTTExMi4zLDEyNi45aC00LjV2LTkuNWMwLTYuNi0xNC0xMC4yLTIxLjItMTAuMnMtMjEuMiwzLjYtMjEuMiwxMC4ydjkuNWgtNC41di05LjVjMC0xMC40LDE2LjgtMTQuOCwyNS43LTE0LjhzMjUuNyw0LjMsMjUuNywxNC44djkuNVoiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHBhdGggZD0iTTEzMS45LDc5LjFjLTguMywwLTE0LjgtNi45LTE0LjgtMTUuN3YtNC41YzAtOC44LDYuNS0xNS43LDE0LjgtMTUuN3MxNC44LDYuOSwxNC44LDE1Ljd2NC41YzAsOC44LTYuNSwxNS43LTE0LjgsMTUuN1pNMTMxLjksNDcuOGMtNS44LDAtMTAuMiw0LjktMTAuMiwxMS4xdjQuNWMwLDYuMiw0LjUsMTEuMSwxMC4yLDExLjFzMTAuMi00LjksMTAuMi0xMS4xdi00LjVjMC02LjItNC41LTExLjEtMTAuMi0xMS4xWiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cGF0aCBkPSJNMTU5LjIsOTguN2gtNC41di05LjVjMC02LjYtMTQtMTAuMi0yMS4yLTEwLjJzLTIxLjIsMy42LTIxLjIsMTAuMnY5LjVoLTQuNXYtOS41YzAtMTAuNCwxNi43LTE0LjgsMjUuNy0xNC44czI1LjcsNC4zLDI1LjcsMTQuOHY5LjVaIiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwYXRoIGQ9Ik0zNSw3OS4xYy04LjMsMC0xNC44LTYuOS0xNC44LTE1Ljd2LTQuNWMwLTguOCw2LjUtMTUuNywxNC44LTE1LjdzMTQuOCw2LjksMTQuOCwxNS43djQuNWMwLDguOC02LjUsMTUuNy0xNC44LDE1LjdaTTM1LDQ3LjhjLTUuOCwwLTEwLjIsNC45LTEwLjIsMTEuMXY0LjVjMCw2LjIsNC41LDExLjEsMTAuMiwxMS4xczEwLjItNC45LDEwLjItMTEuMXYtNC41YzAtNi4yLTQuNS0xMS4xLTEwLjItMTEuMVoiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHBhdGggZD0iTTYyLjIsOTguN2gtNC41di05LjVjMC02LjYtMTQtMTAuMi0yMS4yLTEwLjJzLTIxLjIsMy42LTIxLjIsMTAuMnY5LjVoLTQuNXYtOS41YzAtMTAuNCwxNi44LTE0LjgsMjUuNy0xNC44czI1LjcsNC4zLDI1LjcsMTQuOHY5LjVoMFoiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PC9zdmc+","clinical-staff.svg":"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJhIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMzIgMTQ2Ij48cGF0aCBkPSJNOTkuMyw4My40Yy0xLjEsMC0yLjItLjgtMi41LTEuOWwtNC42LTE3LjRjLS4yLTEuMi0uOS0xLjktMS44LTIuMmwtOS40LTMuMWMtLjktLjMtMS45LDAtMi42LjZsLTEwLjYsMTAuN2MtMSwxLTIuNywxLTMuNiwwbC0xMC42LTEwLjdjLS43LS43LTEuNy0uOS0yLjYtLjZsLTkuNCwzLjFjLS45LjMtMS42LDEuMS0xLjcsMmwtNC43LDE3LjdjLS40LDEuNC0xLjgsMi4yLTMuMSwxLjgtMS40LS40LTIuMi0xLjgtMS44LTMuMWw0LjYtMTcuNGMuNC0yLjYsMi40LTQuOSw1LjEtNS44bDkuNC0zLjFjMi44LS45LDUuOC0uMiw3LjksMS45bDguNyw4LjksOC43LTguOWMyLjEtMi4xLDUuMS0yLjgsNy45LTEuOWw5LjQsMy4xYzIuNy45LDQuNywzLjIsNS4xLDZsNC42LDE3LjJjLjQsMS40LS41LDIuOC0xLjgsMy4xLS4yLDAtLjQsMC0uNywwIiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwYXRoIGQ9Ik02Niw0Ny4zYy04LjUsMC0xNS40LTcuMi0xNS40LTE2di0zLjhjMC04LjgsNi45LTE2LDE1LjQtMTZzMTUuNCw3LjIsMTUuNCwxNnYzLjhjMCw4LjgtNi45LDE2LTE1LjQsMTZNNjYsMTYuNmMtNS42LDAtMTAuMiw0LjktMTAuMiwxMC45djMuOGMwLDYsNC42LDEwLjksMTAuMiwxMC45czEwLjItNC45LDEwLjItMTAuOXYtMy44YzAtNi00LjYtMTAuOS0xMC4yLTEwLjkiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHBhdGggZD0iTTEwNC40LDEzNC41SDI3LjZjLTEuMiwwLTIuMi0uOC0yLjUtMS45bC00LjctMTguN2MtNi4xLTEtMTAuOC02LjMtMTAuOC0xMi42di0xMC4yYzAtMS40LDEuMS0yLjYsMi42LTIuNmgxMDcuNWMxLjQsMCwyLjYsMS4xLDIuNiwyLjZ2MTAuMmMwLDYuNC00LjcsMTEuNy0xMC44LDEyLjZsLTQuNywxOC43Yy0uMywxLjEtMS4zLDEuOS0yLjUsMS45TTI5LjYsMTI5LjRoNzIuOGw0LjYtMTguNWMuMy0xLjEsMS4zLTEuOSwyLjUtMS45LDQuMiwwLDcuNy0zLjQsNy43LTcuN3YtNy43SDE0Ljh2Ny43YzAsNC4yLDMuNCw3LjcsNy43LDcuN3MyLjIuOCwyLjUsMS45bDQuNiwxOC41WiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48L3N2Zz4=","regulatory-team.svg":"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJhIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMzQgMTM4Ij48cGF0aCBkPSJNMTI1LjcsNTMuNUg4LjNjLTEuNCwwLTIuNi0xLjEtMi42LTIuNnYtNi4zYzAtMy40LDIuMi02LjMsNS40LTcuM2w1Mi45LTI4LjljMi0uOCwzLjgtLjgsNS41LS4ybDUzLjMsMjljMy4yLDEsNS40LDMuOSw1LjQsNy4zdjYuM2MwLDEuNC0xLjEsMi42LTIuNSwyLjZNMTAuOSw0OC40aDExMi4zdi0zLjdjMC0xLjItLjgtMi4yLTEuOS0yLjUtLjIsMC0uNC0uMS0uNi0uMmwtNTMuMi0yOWMtLjIsMC0uOCwwLTEuMy4yTDEzLjQsNDJjLS4yLjEtLjQuMi0uNi4yLTEuMS4zLTEuOSwxLjMtMS45LDIuNXYzLjdoMFoiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHBhdGggZD0iTTMzLjgsMTEyLjJjLTEuNCwwLTIuNi0xLjEtMi42LTIuNnYtNTguN2MwLTEuNCwxLjEtMi42LDIuNi0yLjZzMi42LDEuMSwyLjYsMi42djU4LjdjMCwxLjQtMS4xLDIuNi0yLjYsMi42IiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwYXRoIGQ9Ik0xOC41LDExMi4yYy0xLjQsMC0yLjYtMS4xLTIuNi0yLjZ2LTU4LjdjMC0xLjQsMS4xLTIuNiwyLjYtMi42czIuNiwxLjEsMi42LDIuNnY1OC43YzAsMS40LTEuMSwyLjYtMi42LDIuNiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cGF0aCBkPSJNMTE1LjUsMTEyLjJjLTEuNCwwLTIuNS0xLjEtMi41LTIuNnYtNTguN2MwLTEuNCwxLjEtMi42LDIuNS0yLjZzMi41LDEuMSwyLjUsMi42djU4LjdjMCwxLjQtMS4xLDIuNi0yLjUsMi42IiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwYXRoIGQ9Ik0xMDAuMiwxMTIuMmMtMS40LDAtMi41LTEuMS0yLjUtMi42di01OC43YzAtMS40LDEuMS0yLjYsMi41LTIuNnMyLjUsMS4xLDIuNSwyLjZ2NTguN2MwLDEuNC0xLjEsMi42LTIuNSwyLjYiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PHBhdGggZD0iTTc0LjYsMTEyLjJjLTEuNCwwLTIuNi0xLjEtMi42LTIuNnYtNTguN2MwLTEuNCwxLjItMi42LDIuNi0yLjZzMi41LDEuMSwyLjUsMi42djU4LjdjMCwxLjQtMS4xLDIuNi0yLjUsMi42IiBzdHlsZT0iZmlsbDojZmZmOyIvPjxwYXRoIGQ9Ik01OS40LDExMi4yYy0xLjQsMC0yLjYtMS4xLTIuNi0yLjZ2LTU4LjdjMC0xLjQsMS4xLTIuNiwyLjYtMi42czIuNiwxLjEsMi42LDIuNnY1OC43YzAsMS40LTEuMSwyLjYtMi42LDIuNiIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48cGF0aCBkPSJNMTIwLjYsMTMwLjFIMTMuNGMtNC4yLDAtNy43LTMuNC03LjctNy42di0xMC4yYzAtMS40LDEuMS0yLjYsMi42LTIuNmgxMTcuNGMxLjQsMCwyLjUsMS4xLDIuNSwyLjZ2MTAuMmMwLDQuMi0zLjQsNy42LTcuNyw3LjZNMTAuOSwxMTQuOHY3LjdjMCwxLjQsMS4xLDIuNiwyLjYsMi42aDEwNy4yYzEuNCwwLDIuNS0xLjEsMi41LTIuNnYtNy43SDEwLjloMFoiIHN0eWxlPSJmaWxsOiNmZmY7Ii8+PC9zdmc+"};
+  document.querySelectorAll('.achc-edu:not([data-ready])').forEach(function(root){
+  root.setAttribute('data-ready','1');
+  const uid='achc'+Math.random().toString(36).slice(2,7);
+  /* ---------- EDIT HERE ---------- */
+  const SEGMENTS = [ // angle = center of wedge (deg, 0 = right, -90 = top)
+    {id:'care',  label:['CUSTOMER CARE','SPECIALIST'], angle:-90, color:'#75a2c0', icon:'customer-care-specialist_1.svg'},
+    {id:'acct',  label:['ACCOUNT','ADVISOR'],          angle:-18, color:'#2E9E75', icon:'account-advisor.svg'},
+    {id:'survey',label:['SURVEY','TEAM'],              angle:54,  color:'#93ca64', icon:'survey-team.svg'},
+    {id:'clin',  label:['CLINICAL','STAFF'],           angle:126, color:'#0081a0', icon:'clinical-staff.svg'},
+    {id:'reg',   label:['REGULATORY','TEAM'],          angle:198, color:'#73c3c3', icon:'regulatory-team.svg'}
+  ];
+  /* ------------------------------- */
+  const asset=f=>ASSETS[f]||f; // resolves image file names (see ASSETS above)
+  root.querySelectorAll('img[src]').forEach(i=>{i.src=asset(i.getAttribute('src'))});
+  const NS='http://www.w3.org/2000/svg', C=250, R_IN=78, R_W=190, R_O1=196, R_O2=244;
+  const rad=d=>d*Math.PI/180, pt=(r,a)=>[C+r*Math.cos(rad(a)),C+r*Math.sin(rad(a))];
+  const f=n=>n.toFixed(2);
+  function wedge(r1,r2,a1,a2){const [x1,y1]=pt(r2,a1),[x2,y2]=pt(r2,a2),[x3,y3]=pt(r1,a2),[x4,y4]=pt(r1,a1);
+   return `M${f(x1)} ${f(y1)}A${r2} ${r2} 0 0 1 ${f(x2)} ${f(y2)}L${f(x3)} ${f(y3)}A${r1} ${r1} 0 0 0 ${f(x4)} ${f(y4)}Z`}
+  function el(tag,attrs,parent,html){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(html)e.innerHTML=html;parent.appendChild(e);return e}
+  const svg=root.querySelector('.wheel');
+  const defs=el('defs',{},svg);
+  // Icons whose artwork sits inside a 500x500 artboard: crop to the drawing (x y w h of the artwork)
+  const BOX={'YourNeeds.svg':[162.8,170.85,163.2,158.3],'Education.svg':[214,224.2,72,51.6]};
+  function icon(parent,file,x,y,w,h){
+    const b=BOX[file], s=el('svg',{x,y,width:w,height:h,viewBox:b.join(' '),preserveAspectRatio:'xMidYMid meet'},parent);
+    el('image',{href:asset(file),x:0,y:0,width:500,height:500},s);
+    return s;
+  }
+  const ICON_W=18, ICON_H=12.9, ICON_GAP=6;
+  const rings={},segs={},ringInfo=[];
+  SEGMENTS.forEach(s=>{
+    const a1=s.angle-36,a2=s.angle+36;
+    // outer education ring
+    const rg=el('g',{class:'ringseg'},svg);
+    el('path',{d:wedge(R_O1,R_O2,a1,a2),fill:'#1f4e6e',stroke:'#2c4260','stroke-width':3},rg);
+    const bottom=s.angle>0&&s.angle<180, r=bottom?224:216;
+    const [sx,sy]=pt(r,bottom?a2-5:a1+5),[ex,ey]=pt(r,bottom?a1+5:a2-5);
+    el('path',{id:uid+'-arc-'+s.id,d:`M${f(sx)} ${f(sy)}A${r} ${r} 0 0 ${bottom?0:1} ${f(ex)} ${f(ey)}`,fill:'none'},defs);
+    const t=el('text',{class:'ringtxt',style:'text-anchor:start'},rg);
+        const tp=el('textPath',{href:'#'+uid+'-arc-'+s.id,startOffset:0},t,'ACHCU EDUCATION');
+        const ic=el('g',{},rg); icon(ic,'Education.svg',0,0,ICON_W,ICON_H);
+        ringInfo.push({bottom,r,a1,a2,t,tp,ic});
+    rings[s.id]=rg;
+    // inner wedge
+    const g=el('g',{class:'seg',tabindex:'-1'},svg);
+    el('path',{d:wedge(R_IN-4,R_W,a1,a2),fill:s.color,stroke:'#2c4260','stroke-width':3},g);
+    const [lx,ly]=pt(128,s.angle);
+    // simple person icon
+    if(s.icon){
+      el('image',{href:asset(s.icon),x:lx-15,y:ly-35,width:30,height:32,preserveAspectRatio:'xMidYMax meet'},g);
+    }else{
+      el('circle',{cx:lx,cy:ly-20,r:5,fill:'none',stroke:'#fff','stroke-width':1.8},g);
+      el('path',{d:`M${lx-11} ${ly-2}q0-10 11-10t11 10z`,fill:'none',stroke:'#fff','stroke-width':1.8},g);
     }
-    const ICON_W=18, ICON_H=12.9, ICON_GAP=6;
-    const rings={},segs={},ringInfo=[];
-    SEGMENTS.forEach(s=>{
-      const a1=s.angle-36,a2=s.angle+36;
-      // outer education ring
-      const rg=el('g',{class:'ringseg'},svg);
-      el('path',{d:wedge(R_O1,R_O2,a1,a2),fill:'#1f4e6e',stroke:'#2c4260','stroke-width':3},rg);
-      const bottom=s.angle>0&&s.angle<180, r=bottom?224:216;
-      const [sx,sy]=pt(r,bottom?a2-5:a1+5),[ex,ey]=pt(r,bottom?a1+5:a2-5);
-      el('path',{id:'arc-'+s.id,d:`M${f(sx)} ${f(sy)}A${r} ${r} 0 0 ${bottom?0:1} ${f(ex)} ${f(ey)}`,fill:'none'},defs);
-      const t=el('text',{class:'ringtxt',style:'text-anchor:start'},rg);
-          const tp=el('textPath',{href:'#arc-'+s.id,startOffset:0},t,'ACHCU EDUCATION');
-          const ic=el('g',{},rg); icon(ic,'Education.svg',0,0,ICON_W,ICON_H);
-          ringInfo.push({bottom,r,a1,a2,t,tp,ic});
-      rings[s.id]=rg;
-      // inner wedge
-      const g=el('g',{class:'seg',tabindex:'-1'},svg);
-      el('path',{d:wedge(R_IN-4,R_W,a1,a2),fill:s.color,stroke:'#2c4260','stroke-width':3},g);
-      const [lx,ly]=pt(128,s.angle);
-      // simple person icon
-      if(s.icon){
-        el('image',{href:asset(s.icon),x:lx-15,y:ly-35,width:30,height:32,preserveAspectRatio:'xMidYMax meet'},g);
-      }else{
-        el('circle',{cx:lx,cy:ly-20,r:5,fill:'none',stroke:'#fff','stroke-width':1.8},g);
-        el('path',{d:`M${lx-11} ${ly-2}q0-10 11-10t11 10z`,fill:'none',stroke:'#fff','stroke-width':1.8},g);
-      }
-      const tt=el('text',{x:lx,y:ly+12},g);
-      s.label.forEach((w,i)=>el('tspan',{x:lx,dy:i?14:0},tt,w));
-      segs[s.id]=g;
+    const tt=el('text',{x:lx,y:ly+12},g);
+    s.label.forEach((w,i)=>el('tspan',{x:lx,dy:i?14:0},tt,w));
+    segs[s.id]=g;
+  });
+  // Lay out "[icon] EDUCATION" as one group, centred along each arc
+  function layoutRings(){
+    ringInfo.forEach(o=>{
+      const L=o.r*rad(62), T=o.t.getComputedTextLength()||70, W=ICON_W+ICON_GAP+T, s0=(L-W)/2;
+      o.tp.setAttribute('startOffset',s0+ICON_W+ICON_GAP);
+      const phi=o.bottom? o.a2-5-(s0+ICON_W/2)/o.r*180/Math.PI : o.a1+5+(s0+ICON_W/2)/o.r*180/Math.PI;
+      const [px,py]=pt(220,phi), rot=o.bottom?phi-90:phi+90;
+      o.ic.setAttribute('transform',`translate(${f(px)} ${f(py)}) rotate(${f(rot)}) translate(${-ICON_W/2} ${-ICON_H/2})`);
     });
-    // Lay out "[icon] EDUCATION" as one group, centred along each arc
-    function layoutRings(){
-      ringInfo.forEach(o=>{
-        const L=o.r*rad(62), T=o.t.getComputedTextLength()||70, W=ICON_W+ICON_GAP+T, s0=(L-W)/2;
-        o.tp.setAttribute('startOffset',s0+ICON_W+ICON_GAP);
-        const phi=o.bottom? o.a2-5-(s0+ICON_W/2)/o.r*180/Math.PI : o.a1+5+(s0+ICON_W/2)/o.r*180/Math.PI;
-        const [px,py]=pt(220,phi), rot=o.bottom?phi-90:phi+90;
-        o.ic.setAttribute('transform',`translate(${f(px)} ${f(py)}) rotate(${f(rot)}) translate(${-ICON_W/2} ${-ICON_H/2})`);
-      });
+  }
+  layoutRings();
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(layoutRings);
+  window.addEventListener('resize',layoutRings);
+  // center
+  el('circle',{cx:C,cy:C,r:R_IN,fill:'#fff'},svg);
+  icon(svg,'YourNeeds.svg',C-22,C-40,44,42);
+  const ct=el('text',{x:C,y:C+22,'text-anchor':'middle','font-size':13,'font-weight':700,fill:'#1f4e6e','letter-spacing':'.06em'},svg);
+  el('tspan',{x:C},ct,'YOUR');el('tspan',{x:C,dy:16},ct,'NEEDS');
+  // steps + panels
+  const stepsEl=root.querySelector('.steps'), sc=root.querySelector('.scroller');
+  // Steps are read from the <section class="panel"> elements in the HTML
+  // Each team name in "Who’s involved?" is matched to the wheel segment with the same label.
+  // "Education Team" lights the outer Education ring.
+  const norm=t=>t.toLowerCase().replace(/[^a-z]/g,'');
+  const TEAM_TO_SEG={clinicalteam:'clin'}; // extra aliases go here
+  SEGMENTS.forEach(s=>TEAM_TO_SEG[norm(s.label.join(''))]=s.id);
+  const STEPS=[...sc.querySelectorAll('.panel')].map(p=>{
+    const teams=[...p.querySelectorAll('.team')].map(t=>norm(t.textContent));
+    const intro=p.hasAttribute('data-intro'); // intro panel: everything highlighted, no 1-2-3 button
+    return {
+      el:p, intro, title:p.querySelector('h2').textContent,
+      short:(p.dataset.short||'').split('|'),
+      active:intro?SEGMENTS.map(s=>s.id):teams.map(n=>TEAM_TO_SEG[n]).filter(Boolean),
+      education:intro||teams.includes('educationteam')
+    };
+  });
+  const NUM=STEPS.filter(s=>!s.intro).length; let num=0;
+  const btns=STEPS.map((s,i)=>{
+    const p=s.el, h=p.querySelector('h2');
+    const head=document.createElement('div');head.className='head';
+    let b=null;
+    if(s.intro){ // "Start Here" button, placed before step 1
+      b=document.createElement('button');b.className='step start';b.type='button';
+      b.setAttribute('aria-label',s.short.join(' '));
+      b.innerHTML=`<span class="pill">${s.short.join(' ')}</span>`;
+      b.onclick=()=>goTo(i);
+      stepsEl.appendChild(b);
+      const c=document.createElement('span');c.className='conn';stepsEl.appendChild(c);
     }
-    layoutRings();
-    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(layoutRings);
-    window.addEventListener('resize',layoutRings);
-    // center
-    el('circle',{cx:C,cy:C,r:R_IN,fill:'#fff'},svg);
-    icon(svg,'YourNeeds.svg',C-22,C-40,44,42);
-    const ct=el('text',{x:C,y:C+22,'text-anchor':'middle','font-size':13,'font-weight':700,fill:'#1f4e6e','letter-spacing':'.06em'},svg);
-    el('tspan',{x:C},ct,'YOUR');el('tspan',{x:C,dy:16},ct,'NEEDS');
-    
-    // steps + panels
-    const stepsEl=document.getElementById('steps'), sc=document.getElementById('scroller');
-    // Steps are read from the <section class="panel"> elements in the HTML
-    // Each team name in "Who’s involved?" is matched to the wheel segment with the same label.
-    // "Education Team" lights the outer Education ring.
-    const norm=t=>t.toLowerCase().replace(/[^a-z]/g,'');
-    const TEAM_TO_SEG={clinicalteam:'clin'}; // extra aliases go here
-    SEGMENTS.forEach(s=>TEAM_TO_SEG[norm(s.label.join(''))]=s.id);
-    const STEPS=[...sc.querySelectorAll('.panel')].map(p=>{
-      const teams=[...p.querySelectorAll('.team')].map(t=>norm(t.textContent));
-      const intro=p.hasAttribute('data-intro'); // intro panel: everything highlighted, no 1-2-3 button
-      return {
-        el:p, intro, title:p.querySelector('h2').textContent,
-        short:(p.dataset.short||'').split('|'),
-        active:intro?SEGMENTS.map(s=>s.id):teams.map(n=>TEAM_TO_SEG[n]).filter(Boolean),
-        education:intro||teams.includes('educationteam')
-      };
-    });
-    const NUM=STEPS.filter(s=>!s.intro).length; let num=0;
-    const btns=STEPS.map((s,i)=>{
-      const p=s.el, h=p.querySelector('h2');
-      const head=document.createElement('div');head.className='head';
-      let b=null;
-      if(s.intro){ // "Start Here" button, placed before step 1
-        b=document.createElement('button');b.className='step start';b.type='button';
-        b.setAttribute('aria-label',s.short.join(' '));
-        b.innerHTML=`<span class="pill">${s.short.join(' ')}</span>`;
-        b.onclick=()=>goTo(i);
-        stepsEl.appendChild(b);
-        const c=document.createElement('span');c.className='conn';stepsEl.appendChild(c);
-      }
-      if(!s.intro){
-        num++;
-        b=document.createElement('button');b.className='step';b.type='button';
-        b.setAttribute('aria-label',`Step ${num}: ${s.title}`);
-        b.innerHTML=`<span class="dot">${num}</span><span>${s.short.join('<br>')}</span>`;
-        b.onclick=()=>goTo(i);
-        stepsEl.appendChild(b);
-        if(num<NUM){const c=document.createElement('span');c.className='conn';stepsEl.appendChild(c)}
-        head.innerHTML=`<span class="badge">${num}</span>`;
-      }
-      h.replaceWith(head);head.appendChild(h);
-      return b;
-    });
-    const dots=STEPS.map((s,i)=>{
-      const d=document.createElement('button');d.type='button';
-      d.setAttribute('aria-label',`Go to ${s.title}`);
-      d.onclick=()=>goTo(i);
-      document.getElementById('dots').appendChild(d);
-      return d;
-    });
-    let cur=-1;
-    function setStep(i){
-      if(i===cur)return;cur=i;
-      dots.forEach((d,j)=>d.classList.toggle('on',j===i));
-      btns.forEach((b,j)=>{if(!b)return;b.classList.toggle('on',j===i);b.setAttribute('aria-current',j===i?'step':'false')});
-      const s=STEPS[i];
-      SEGMENTS.forEach(g=>{
-        segs[g.id].classList.toggle('dim',!s.active.includes(g.id));
-        rings[g.id].classList.toggle('dim',!s.education);
-      });
+    if(!s.intro){
+      num++;
+      b=document.createElement('button');b.className='step';b.type='button';
+      b.setAttribute('aria-label',`Step ${num}: ${s.title}`);
+      b.innerHTML=`<span class="dot">${num}</span><span>${s.short.join('<br>')}</span>`;
+      b.onclick=()=>goTo(i);
+      stepsEl.appendChild(b);
+      if(num<NUM){const c=document.createElement('span');c.className='conn';stepsEl.appendChild(c)}
+      head.innerHTML=`<span class="badge">${num}</span>`;
     }
-    // Slower, eased scroll between sections (browsers don't let CSS set the duration)
-    const DURATION=1200; // ms: raise for slower, lower for faster
-    let anim=0;
-    function goTo(i){
-      const from=sc.scrollLeft, to=i*sc.clientWidth, id=++anim;
-      if(matchMedia('(prefers-reduced-motion:reduce)').matches){sc.scrollLeft=to;return}
-      sc.style.scrollSnapType='none';sc.style.scrollBehavior='auto';
-      const t0=performance.now();
-      (function step(t){
-        if(id!==anim)return;
-        const k=Math.min(1,(t-t0)/DURATION), e=k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2;
-        sc.scrollLeft=from+(to-from)*e;
-        if(k<1)requestAnimationFrame(step);else{sc.style.scrollSnapType='';sc.style.scrollBehavior=''}
-      })(t0);
-    }
-    // Fade each panel out as it scrolls away and in as it arrives
-    const SLIDE=0.2; // how much the content visibly slides: 1 = full slide, 0 = pure fade
-    function fade(){
-      const w=sc.clientWidth||1, x=sc.scrollLeft;
-      STEPS.forEach((s,i)=>{
-        const o=x-i*w, d=Math.min(1,Math.abs(o)/w);
-        s.el.style.opacity=Math.max(0,1-d*2);              // fully fades out before the next fades in
-        s.el.style.transform=`translateX(${o*(1-SLIDE)}px)`; // cancels most of the slide
-        s.el.style.pointerEvents=d>.5?'none':'';
-      });
-    }
-    sc.addEventListener('scroll',()=>{fade();setStep(Math.round(sc.scrollLeft/sc.clientWidth))},{passive:true});
-    window.addEventListener('resize',()=>{ // keep the current section aligned when the width changes (rotate / resize)
-      sc.style.scrollBehavior='auto';sc.scrollLeft=Math.max(cur,0)*sc.clientWidth;sc.style.scrollBehavior='';fade();
+    h.replaceWith(head);head.appendChild(h);
+    return b;
+  });
+  const dots=STEPS.map((s,i)=>{
+    const d=document.createElement('button');d.type='button';
+    d.setAttribute('aria-label',`Go to ${s.title}`);
+    d.onclick=()=>goTo(i);
+    root.querySelector('.dots').appendChild(d);
+    return d;
+  });
+  let cur=-1;
+  function setStep(i){
+    if(i===cur)return;cur=i;
+    dots.forEach((d,j)=>d.classList.toggle('on',j===i));
+    btns.forEach((b,j)=>{if(!b)return;b.classList.toggle('on',j===i);b.setAttribute('aria-current',j===i?'step':'false')});
+    const s=STEPS[i];
+    SEGMENTS.forEach(g=>{
+      segs[g.id].classList.toggle('dim',!s.active.includes(g.id));
+      rings[g.id].classList.toggle('dim',!s.education);
     });
-    fade();
-    let lock=false;
-    const WHEEL_AREA=document.querySelector('.grid'); // wheel + content. Use document.querySelector('main') to include the title too
-    WHEEL_AREA.addEventListener('wheel',e=>{
-      const d=Math.abs(e.deltaY)>=Math.abs(e.deltaX)?e.deltaY:e.deltaX;
-      if(Math.abs(d)<4)return;
-      const next=cur+(d>0?1:-1);
-      if(next<0||next>=STEPS.length)return; // at the first/last step, let the page scroll normally
-      e.preventDefault();
-      if(lock)return;
-      lock=true;
-      goTo(next);
-      setTimeout(()=>{lock=false},1200);
-    },{passive:false});
-    setStep(0);
-    </script>
-    </body>
-    </html>
+  }
+  // Slower, eased scroll between sections (browsers don't let CSS set the duration)
+  const DURATION=1200; // ms: raise for slower, lower for faster
+  let anim=0;
+  function goTo(i){
+    const from=sc.scrollLeft, to=i*sc.clientWidth, id=++anim;
+    if(matchMedia('(prefers-reduced-motion:reduce)').matches){sc.scrollLeft=to;return}
+    sc.style.scrollSnapType='none';sc.style.scrollBehavior='auto';
+    const t0=performance.now();
+    (function step(t){
+      if(id!==anim)return;
+      const k=Math.min(1,(t-t0)/DURATION), e=k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2;
+      sc.scrollLeft=from+(to-from)*e;
+      if(k<1)requestAnimationFrame(step);else{sc.style.scrollSnapType='';sc.style.scrollBehavior=''}
+    })(t0);
+  }
+  // Fade each panel out as it scrolls away and in as it arrives
+  const SLIDE=0.2; // how much the content visibly slides: 1 = full slide, 0 = pure fade
+  function fade(){
+    const w=sc.clientWidth||1, x=sc.scrollLeft;
+    STEPS.forEach((s,i)=>{
+      const o=x-i*w, d=Math.min(1,Math.abs(o)/w);
+      s.el.style.opacity=Math.max(0,1-d*2);              // fully fades out before the next fades in
+      s.el.style.transform=`translateX(${o*(1-SLIDE)}px)`; // cancels most of the slide
+      s.el.style.pointerEvents=d>.5?'none':'';
+    });
+  }
+  sc.addEventListener('scroll',()=>{fade();setStep(Math.round(sc.scrollLeft/sc.clientWidth))},{passive:true});
+  window.addEventListener('resize',()=>{ // keep the current section aligned when the width changes (rotate / resize)
+    sc.style.scrollBehavior='auto';sc.scrollLeft=Math.max(cur,0)*sc.clientWidth;sc.style.scrollBehavior='';fade();
+  });
+  fade();
+  let lock=false;
+  const WHEEL_AREA=root.querySelector('.grid'); // wheel + content. Use root instead to include the title and padding too
+  WHEEL_AREA.addEventListener('wheel',e=>{
+    const d=Math.abs(e.deltaY)>=Math.abs(e.deltaX)?e.deltaY:e.deltaX;
+    if(Math.abs(d)<4)return;
+    const next=cur+(d>0?1:-1);
+    if(next<0||next>=STEPS.length)return; // at the first/last step, let the page scroll normally
+    e.preventDefault();
+    if(lock)return;
+    lock=true;
+    goTo(next);
+    setTimeout(()=>{lock=false},1200);
+  },{passive:false});
+  setStep(0);
+  });
+  })();
+  </script>
+  

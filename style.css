@@ -1,65 +1,78 @@
-:root{color-scheme:dark;--bg:#2c4260;--ring:#1f4e6e;--ink:#fff;--mute:#5c7088;--line:#4a617c;
-    box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--ink);font-family:Montserrat,system-ui,sans-serif;min-height:100vh}
-    main{max-width:1180px;margin:0 auto;padding:40px 32px}
-    h1{font-size:24px;font-weight:600;margin:0 0 24px}
-    .grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:center}
-    svg.wheel{width:100%;height:auto;display:block}
-    .seg,.ringseg{transition:opacity 1s ease}
-    .dim{opacity:.22}
-    .seg text,.ringtxt{fill:#fff;font-weight:600;font-size:11.5px;letter-spacing:.06em;text-anchor:middle}
-    .ringtxt{font-size:10.5px;letter-spacing:.12em}
-    .lbl-dark{fill:#fff}
-    .steps{display:flex;align-items:flex-start;justify-content:center;gap:0;margin-bottom:36px}
-    .step{all:unset;cursor:pointer;display:flex;flex-direction:column;align-items:center;width:50px;white-space:nowrap;text-align:center;font-size:12px;font-weight:600;color:var(--mute);gap:8px;transition:color .3s}
-    .step .dot{width:50px;height:50px;border-radius:50%;border:3px solid var(--mute);display:grid;place-items:center;font-size:22px;font-weight:700;transition:all .3s}
-    .step.on{color:#fff}.step.on .dot{border-color:#fff;background:var(--bg)}
-    .step:hover .dot{border-color:#cfe0f0}
-    .step:focus-visible .dot{outline:3px solid #a9d18e;outline-offset:3px}
-    .conn{flex:none;width:48px;height:3px;background:var(--mute);margin-top:24px}
-        .step.start{width:auto}
-        .step .pill{height:50px;padding:0 20px;border-radius:25px;border:3px solid var(--mute);display:flex;align-items:center;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;transition:all .3s}
-        .step.start.on .pill{border-color:#fff;background:var(--bg)}
-        .step.start:hover .pill{border-color:#cfe0f0}
-        .step.start:focus-visible .pill{outline:3px solid #a9d18e;outline-offset:3px}
-    .scroller{display:flex;padding-bottom:10px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
-    .scroller::-webkit-scrollbar{display:none}
-    .panel{flex:0 0 100%;min-width:0;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:flex-start}
-    .head{display:flex;gap:18px;align-items:center;margin-bottom:12px}
-    .badge{flex:none;width:52px;height:52px;border-radius:50%;border:3px solid #fff;display:grid;place-items:center;font-size:22px;font-weight:700}
-    .head h2{margin:0;font-size:19px;font-weight:600}
-    .panel p{margin:0 0 16px;font-size:13px;line-height:1.55;max-width:60ch}
-    .who{border-top:1px solid var(--line);padding-top:14px}
-    .who em{display:block;text-align:center;font-size:14px;margin-bottom:14px}
-    .teams{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 10px}
-    .team{flex:1 1 84px;max-width:120px;min-width:0;text-align:center;font-size:10.5px;line-height:1.35;font-weight:600;letter-spacing:.04em;text-transform:uppercase;overflow-wrap:break-word}
-    .ph,.team img{display:block;width:44px;height:44px;margin:0 auto 10px;object-fit:cover}
-    .ph{border:2px dashed #fff;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.6' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='16' rx='2'/%3E%3Ccircle cx='9' cy='10' r='1.6'/%3E%3Cpath d='M3 17l5-5 4 4 3-3 6 6'/%3E%3C/svg%3E") center/22px no-repeat}
-    .team img.icon{width:56px;height:52px;object-fit:contain}
-        .dots{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:18px}
-    .dots button{all:unset;cursor:pointer;width:10px;height:10px;border-radius:5px;background:var(--mute);transition:width .3s,background .3s}
-    .dots button:hover{background:#cfe0f0}
-    .dots button.on{width:26px;background:#fff}
-    .dots button:focus-visible{outline:2px solid #a9d18e;outline-offset:3px}
-    svg.wheel{max-width:560px;margin:0 auto}
-        .scroller{overscroll-behavior-x:contain}
-        .dots button{position:relative}
-        .dots button::after{content:'';position:absolute;inset:-12px -6px} /* bigger tap area */
-        body{min-height:100dvh}
-        @media (max-width:860px){.grid{grid-template-columns:1fr;gap:28px}main{padding:28px max(18px,env(safe-area-inset-right)) 28px max(18px,env(safe-area-inset-left))}svg.wheel{max-width:420px}}
-        @media (max-width:560px){
-          h1{font-size:20px;margin-bottom:16px}
-          svg.wheel{max-width:360px}
-          .seg text{font-size:14px}.ringtxt{font-size:12px}
-          .steps{margin-bottom:24px}
-          .head h2{font-size:18px}
-          .panel p{font-size:14px}
-          .team{font-size:10px}
-        }
-        @media (max-width:400px){
-          .conn{width:18px;margin-top:20px}.panel p{font-size:13.5px}
-          .step{width:42px}.step .dot{width:42px;height:42px;font-size:19px}
-          .step.start{width:auto}.step .pill{height:42px;padding:0 13px;font-size:10.5px}
-        }
-    @media (prefers-reduced-motion:reduce){.scroller{scroll-behavior:auto}.seg,.ringseg{transition:none}}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+.achc-edu{font-size:16px;line-height:1.4;text-align:left;position:relative}
+.achc-edu h2,.achc-edu p{padding:0;text-transform:none;letter-spacing:normal;font-family:inherit;color:inherit;line-height:1.25}
+.achc-edu .panel p{line-height:1.55}
+.achc-edu img{max-width:none;border:0;box-shadow:none}
+.achc-edu svg.wheel{max-width:560px}
+.achc-edu{color-scheme:dark;--bg:#2c4260;--ring:#1f4e6e;--ink:#fff;--mute:#5c7088;--line:#4a617c;
+box-sizing:border-box;}
+.achc-edu,.achc-edu *{box-sizing:border-box}
+.achc-edu{background:var(--bg);color:var(--ink);font-family:Montserrat,system-ui,sans-serif}
+.achc-edu{max-width:1180px;margin:0 auto;padding:40px 32px}
+.achc-edu .achc-title{font-size:24px;font-weight:600;margin:0 0 24px}
+.achc-edu .grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:center}
+.achc-edu svg.wheel{width:100%;height:auto;display:block}
+.achc-edu .seg,.achc-edu .ringseg{transition:opacity 1s ease}
+.achc-edu .dim{opacity:.22}
+.achc-edu .seg text,.achc-edu .ringtxt{fill:#fff;font-weight:600;font-size:11.5px;letter-spacing:.06em;text-anchor:middle}
+.achc-edu .ringtxt{font-size:10.5px;letter-spacing:.12em}
+.achc-edu .lbl-dark{fill:#fff}
+.achc-edu .steps{display:flex;align-items:flex-start;justify-content:center;gap:0;margin-bottom:36px}
+.achc-edu .step{all:unset;cursor:pointer;display:flex;flex-direction:column;align-items:center;width:50px;white-space:nowrap;text-align:center;font-size:12px;font-weight:600;color:var(--mute);gap:8px;transition:color .3s}
+.achc-edu .step .dot{width:50px;height:50px;border-radius:50%;border:3px solid var(--mute);display:grid;place-items:center;font-size:22px;font-weight:700;transition:all .3s}
+.achc-edu .step.on{color:#fff}
+.achc-edu .step.on .dot{border-color:#fff;background:var(--bg)}
+.achc-edu .step:hover .dot{border-color:#cfe0f0}
+.achc-edu .step:focus-visible .dot{outline:3px solid #a9d18e;outline-offset:3px}
+.achc-edu .conn{flex:none;width:48px;height:3px;background:var(--mute);margin-top:24px}
+.achc-edu .step.start{width:auto}
+.achc-edu .step .pill{height:50px;padding:0 20px;border-radius:25px;border:3px solid var(--mute);display:flex;align-items:center;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;transition:all .3s}
+.achc-edu .step.start.on .pill{border-color:#fff;background:var(--bg)}
+.achc-edu .step.start:hover .pill{border-color:#cfe0f0}
+.achc-edu .step.start:focus-visible .pill{outline:3px solid #a9d18e;outline-offset:3px}
+.achc-edu .scroller{display:flex;padding-bottom:10px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+.achc-edu .scroller::-webkit-scrollbar{display:none}
+.achc-edu .panel{flex:0 0 100%;min-width:0;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:flex-start}
+.achc-edu .head{display:flex;gap:18px;align-items:center;margin-bottom:12px}
+.achc-edu .badge{flex:none;width:52px;height:52px;border-radius:50%;border:3px solid #fff;display:grid;place-items:center;font-size:22px;font-weight:700}
+.achc-edu .head h2{margin:0;font-size:19px;font-weight:600}
+.achc-edu .panel p{margin:0 0 16px;font-size:13px;line-height:1.55;max-width:60ch}
+.achc-edu .who{border-top:1px solid var(--line);padding-top:14px}
+.achc-edu .who em{display:block;text-align:center;font-size:14px;margin-bottom:14px}
+.achc-edu .teams{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 10px}
+.achc-edu .team{flex:1 1 84px;max-width:120px;min-width:0;text-align:center;font-size:10.5px;line-height:1.35;font-weight:600;letter-spacing:.04em;text-transform:uppercase;overflow-wrap:break-word}
+.achc-edu .ph,.achc-edu .team img{display:block;width:44px;height:44px;margin:0 auto 10px;object-fit:cover}
+.achc-edu .ph{border:2px dashed #fff;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.6' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='16' rx='2'/%3E%3Ccircle cx='9' cy='10' r='1.6'/%3E%3Cpath d='M3 17l5-5 4 4 3-3 6 6'/%3E%3C/svg%3E") center/22px no-repeat}
+.achc-edu .team img.icon{width:56px;height:52px;object-fit:contain}
+.achc-edu .dots{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:18px}
+.achc-edu .dots button{all:unset;cursor:pointer;width:10px;height:10px;border-radius:5px;background:var(--mute);transition:width .3s,background .3s}
+.achc-edu .dots button:hover{background:#cfe0f0}
+.achc-edu .dots button.on{width:26px;background:#fff}
+.achc-edu .dots button:focus-visible{outline:2px solid #a9d18e;outline-offset:3px}
+.achc-edu svg.wheel{max-width:560px;margin:0 auto}
+.achc-edu .scroller{overscroll-behavior-x:contain}
+.achc-edu .dots button{position:relative}
+.achc-edu .dots button::after{content:'';position:absolute;inset:-12px -6px}
+@media (max-width:860px){.achc-edu .grid{grid-template-columns:1fr;gap:28px}
+.achc-edu{padding:28px max(18px,env(safe-area-inset-right)) 28px max(18px,env(safe-area-inset-left))}
+.achc-edu svg.wheel{max-width:420px}
+}
+@media (max-width:560px){.achc-edu .achc-title{font-size:20px;margin-bottom:16px}
+.achc-edu svg.wheel{max-width:360px}
+.achc-edu .seg text{font-size:14px}
+.achc-edu .ringtxt{font-size:12px}
+.achc-edu .steps{margin-bottom:24px}
+.achc-edu .head h2{font-size:18px}
+.achc-edu .panel p{font-size:14px}
+.achc-edu .team{font-size:10px}
+}
+@media (max-width:400px){.achc-edu .conn{width:18px;margin-top:20px}
+.achc-edu .panel p{font-size:13.5px}
+.achc-edu .step{width:42px}
+.achc-edu .step .dot{width:42px;height:42px;font-size:19px}
+.achc-edu .step.start{width:auto}
+.achc-edu .step .pill{height:42px;padding:0 13px;font-size:10.5px}
+}
+@media (prefers-reduced-motion:reduce){.achc-edu .scroller{scroll-behavior:auto}
+.achc-edu .seg,.achc-edu .ringseg{transition:none}
+}
