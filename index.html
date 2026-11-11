@@ -108,7 +108,7 @@
       const a1=s.angle-36,a2=s.angle+36;
       // outer education ring
       const rg=el('g',{class:'ringseg'},svg);
-      el('path',{d:wedge(R_O1,R_O2,a1,a2),fill:'#1f4e6e',stroke:'#2c4260','stroke-width':3},rg);
+      el('path',{d:wedge(R_O1,R_O2,a1,a2),fill:'#1f4e6e',stroke:'#015175','stroke-width':3},rg);
       const bottom=s.angle>0&&s.angle<180, r=bottom?224:216;
       const [sx,sy]=pt(r,bottom?a2-5:a1+5),[ex,ey]=pt(r,bottom?a1+5:a2-5);
       el('path',{id:uid+'-arc-'+s.id,d:`M${f(sx)} ${f(sy)}A${r} ${r} 0 0 ${bottom?0:1} ${f(ex)} ${f(ey)}`,fill:'none'},defs);
@@ -119,7 +119,7 @@
       rings[s.id]=rg;
       // inner wedge
       const g=el('g',{class:'seg',tabindex:'-1'},svg);
-      el('path',{d:wedge(R_IN-4,R_W,a1,a2),fill:s.color,stroke:'#2c4260','stroke-width':3},g);
+      el('path',{d:wedge(R_IN-4,R_W,a1,a2),fill:s.color,stroke:'#015175','stroke-width':3},g);
       const [lx,ly]=pt(128,s.angle);
       // simple person icon
       if(s.icon){
