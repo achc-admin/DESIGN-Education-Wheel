@@ -4,7 +4,7 @@
 .achc-edu .panel p{line-height:1.55}
 .achc-edu img{max-width:none;border:0;box-shadow:none}
 .achc-edu svg.wheel{max-width:560px}
-.achc-edu{color-scheme:dark;--bg:#2c4260;--ring:#1f4e6e;--ink:#fff;--mute:#5c7088;--line:#4a617c;
+.achc-edu{color-scheme:dark;--bg:#015175;--ring:#1f4e6e;--ink:#fff;--mute:#5c7088;--line:#4a617c;
 box-sizing:border-box;}
 .achc-edu,.achc-edu *{box-sizing:border-box}
 .achc-edu{background:var(--bg);color:var(--ink);font-family:Montserrat,system-ui,sans-serif}
