@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 .achc-edu{font-size:16px;line-height:1.4;text-align:left;position:relative}
 .achc-edu h2,.achc-edu p{padding:0;text-transform:none;letter-spacing:normal;font-family:inherit;color:inherit;line-height:1.25}
 .achc-edu .panel p{line-height:1.55}
 .achc-edu img{max-width:none;border:0;box-shadow:none}
 .achc-edu svg.wheel{max-width:560px}
-.achc-edu{color-scheme:dark;--bg:#015175;--ring:#1f4e6e;--ink:#fff;--mute:#5c7088;--line:#4a617c;
+.achc-edu{color-scheme:dark;--bg:#2c4260;--ring:#1f4e6e;--ink:#fff;--mute:#5c7088;--line:#4a617c;
 box-sizing:border-box;}
 .achc-edu,.achc-edu *{box-sizing:border-box}
 .achc-edu{background:var(--bg);color:var(--ink);font-family:Montserrat,system-ui,sans-serif}
