@@ -246,11 +246,12 @@
     let lock=false;
     const WHEEL_AREA=root.querySelector('.grid'); // wheel + content. Use root instead to include the title and padding too
     WHEEL_AREA.addEventListener('wheel',e=>{
+      if(e.ctrlKey)return; // let pinch / ctrl+wheel zoom work
+      e.preventDefault(); // never scroll the page while the pointer is over the widget
       const d=Math.abs(e.deltaY)>=Math.abs(e.deltaX)?e.deltaY:e.deltaX;
       if(Math.abs(d)<4)return;
       const next=cur+(d>0?1:-1);
-      if(next<0||next>=STEPS.length)return; // at the first/last step, let the page scroll normally
-      e.preventDefault();
+      if(next<0||next>=STEPS.length)return; // first/last section: nothing to move to, but the page still stays put
       if(lock)return;
       lock=true;
       goTo(next);
