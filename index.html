@@ -244,7 +244,7 @@
     });
     fade();
     let lock=false;
-    const WHEEL_AREA=root.querySelector('.grid'); // wheel + content. Use root instead to include the title and padding too
+    const WHEEL_AREA=sc; // content section only. To include the wheel graphic too, use the .grid element instead
     WHEEL_AREA.addEventListener('wheel',e=>{
       if(e.ctrlKey)return; // let pinch / ctrl+wheel zoom work
       e.preventDefault(); // never scroll the page while the pointer is over the widget
